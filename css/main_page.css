@@ -4,10 +4,10 @@ body{
 
 /* Panel */
 #panel{
-	background-color:gray;
+	background-color:#C4C4C4;
 	width:80px;
 	height:500px;
-	opacity:0.5;
+	/* opacity:0.5; */
 	
 	position: relative;
 	float:left;
@@ -28,8 +28,16 @@ body{
 }
 
 .icon{
-	width:80%;
+	width:60px;
+	height:60px;
 	margin:9px;
+	border-radius:50%;
+}
+
+.icon img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
 }
 
 /* Main Part */
