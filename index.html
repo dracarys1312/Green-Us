@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GreenUs</title>
+	</head>
+	
+	<style>
+		@font-face{
+			font-family: HelveBold;
+			src: url('fonts/HelveBold.ttf');
+		}
+		
+		body{
+			background-image: url('images/Background.png');
+			background-attachment: absolute;
+			background-size: 100%;
+		}
+		
+		#logo{
+			position:absolute;
+			
+			width:120px;
+			height:auto;
+			left:2%;
+			top:2%;
+		}
+		
+		#welcome{
+			position:absolute;
+			left:17%;
+			bottom:8em;
+		}
+		
+		#GetStarted{
+			width:200px;
+			height:auto;
+			
+			position:fixed;
+			left:18%;
+			bottom:4em;
+			z-index:-1;
+		}
+		
+		#txtGetStarted{
+			font-family:HelveBold;
+			font-size:26px;
+			color:white;
+			
+			position:absolute;
+			text-align:left;
+			padding-top:35.5%;
+			padding-left:19.6%;
+			z-index:1;
+			
+		}
+		
+		#SignUp{
+			width:120px;
+			height:auto;
+			
+			position:absolute;
+			top:0.75em;
+			right:8em;
+		}
+		
+		#txtSignUp{
+			font-family:HelveBold;
+			font-size:22px;
+			color:white;
+			text-decoration:none;
+			
+			position:absolute;
+			text-align:left;
+			padding-top:0.6em;
+			padding-left:49.9em;
+			z-index:1;
+		}
+		
+		#txtSignIn{
+			font-family:HelveBold;
+			font-size:22px;
+			color:#2FA86A;
+			
+			position:absolute;
+			text-align:left;
+			padding-top:0.6em;
+			padding-left:55em;
+		}
+		
+	</style>
+	
+	<body>
+		<img src="images/logo.png" id="logo">
+		
+		<img src="images/Welcome01.png" id="welcome">
+		
+		<div id="txtGetStarted">Get Started</div>
+		<img src="images/GetStarted.png" id="GetStarted">
+		
+		<a href="signup.html" id="txtSignUp">Sign Up</a>
+		<img src="images/SignUp.png" id="SignUp">
+		
+		<div id="txtSignIn">Sign In</div>
+	</body>
+</html>

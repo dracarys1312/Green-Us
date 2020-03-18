@@ -1,0 +1,104 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Sign Up</title>
+	</head>
+	
+	<style>
+		@font-face{
+			font-family: Abel;
+			src: url('fonts/VL_AbelPro.ttf');
+		}
+		
+		body{
+			background-image: url('images/BackgroundSignUp.png');
+			background-attachment: fixed;
+			background-size: 100%;
+		}
+		
+		#welcome{
+			position:absolute;
+			left:17%;
+			top:8em;
+		}
+		
+		#signup{
+			width:250px;
+			height:auto;
+			
+			position:absolute;
+			top:0.75em;
+			right:8em;
+		}
+		
+		.text{
+			width:auto;
+			height:30px;
+			
+			font-family:Abel;
+			font-size:30px;
+			
+			margin-top:10px;
+			margin-bottom:10px;
+		}
+		
+		#button{
+			position:absolute;
+			left:20em;
+			right:20em;
+		}
+		
+		#confirm{
+			width:auto;
+			height:50px;
+			
+			font-family:Abel;
+			font-size:30px;
+			
+			margin-top:10px;
+			margin-bottom:5px;
+		}
+		
+		#terms{
+			text-decoration:none;
+			font-family:Abel;
+			font-size:30px;
+		}
+		
+		#txtSignUp{
+			font-family:Abel;
+			font-size:22px;
+			color:black;
+			text-decoration:none;
+			
+			position:absolute;
+			text-align:left;
+			padding-top:0.6em;
+			padding-left:49.9em;
+			z-index:1;
+		}
+	</style>
+	
+	<body>
+		<img src="images/Welcome02.png" id="welcome">
+		
+		<img src="images/CreateAccount.png" id="signup">
+		
+		<div class="text">Account</div>
+		<input type="text">
+		
+		<div class="text">Password</div>
+		<input type="password">
+		
+		<div class="text">Confirm Password</div>
+		<input type="password">
+			
+		<img src="images/SignUp.png" id="button">
+		
+		<div id="confirm">By signing up, I agree with</div>
+		<a href="#" id="terms">terms of service</a>
+		
+		<a href="signup.html" id="txtSignUp">Sign Up</a>
+	</body>
+	
+</html>
