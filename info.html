@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GreenUs</title>
+	</head>
+	
+	<style>
+		body{
+			margin:0;
+		}
+		
+		#photo{
+			width:400px;
+			height:500px;
+			
+			position:absolute;
+			margin-top:150px;
+			margin-left:50px;
+			margin-bottom:30px;
+			
+			z-index:2;
+		}
+		
+		#photo img{
+			width:100%;
+			height:100%;
+			object-fit:cover;
+		}
+		
+		#info{
+			background-color:#F1EDED;
+			width:1000px;
+			height:550px;
+			
+			position:absolute;
+			margin-left:300px;
+			margin-top:30px;
+			
+			z-index:-1;
+		}
+	</style>
+	
+	<body>
+		<div id="info"></div>
+		<div id="photo"><img src="images/sunflower.jpg"></div>
+	</body>
+</html>
