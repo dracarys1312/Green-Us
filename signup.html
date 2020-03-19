@@ -18,8 +18,8 @@
 		
 		#welcome{
 			position:absolute;
-			left:17%;
-			top:8em;
+			left:14%;
+			top:32%;
 		}
 		
 		#signup{
@@ -27,8 +27,8 @@
 			height:auto;
 			
 			position:absolute;
-			top:0.75em;
-			right:8em;
+			top:65%;
+			left:18.8%;
 		}
 		
 		.text{
@@ -37,61 +37,95 @@
 			
 			font-family:Abel;
 			font-size:30px;
-			
-			margin-top:10px;
+			margin-top:20px;
 			margin-bottom:10px;
+			margin-left: 65%;
 		}
 		
 		#button{
 			position:absolute;
-			left:20em;
-			right:20em;
+			bottom:9%;
+			right:18%;
 		}
 		
 		#confirm{
 			width:auto;
 			height:50px;
-			
+			text-align: left;
 			font-family:Abel;
 			font-size:30px;
-			
-			margin-top:10px;
+			margin-left:64%;
+			margin-top:15px;
 			margin-bottom:5px;
+			
+			
 		}
 		
 		#terms{
 			text-decoration:none;
 			font-family:Abel;
+			text-align: left;
 			font-size:30px;
+			margin-left: 69%;
+			margin-top:5px;
+			margin-bottom:25px;
+
 		}
 		
 		#txtSignUp{
 			font-family:Abel;
-			font-size:22px;
-			color:black;
+			font-size:24px;
+			color:white;
 			text-decoration:none;
 			
 			position:absolute;
 			text-align:left;
-			padding-top:0.6em;
-			padding-left:49.9em;
+			bottom:11.9%;
+			right:16.8%;
+			padding-top:12em;
+			padding-right:2em;
 			z-index:1;
 		}
+
+		#blank{
+			width:auto;
+			height:30px;
+			
+			font-family:Abel;
+			font-size:30px;
+			top:10em;
+			margin-top:10px;
+			margin-bottom:10px;
+			margin-left: 65%;
+
+		}
+
+		#logo{
+			position:absolute;
+			
+			width:120px;
+			height:auto;
+			left:2%;
+			top:2%;
+		}
+
 	</style>
 	
 	<body>
+		<img src="images/logo.png" id="logo">
+
 		<img src="images/Welcome02.png" id="welcome">
 		
 		<img src="images/CreateAccount.png" id="signup">
 		
 		<div class="text">Account</div>
-		<input type="text">
+		<input type="text" id="blank">
 		
 		<div class="text">Password</div>
-		<input type="password">
+		<input type="password" id="blank">
 		
 		<div class="text">Confirm Password</div>
-		<input type="password">
+		<input type="password" id="blank">
 			
 		<img src="images/SignUp.png" id="button">
 		
