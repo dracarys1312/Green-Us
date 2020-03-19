@@ -2,105 +2,80 @@
 <html>
 	<head>
 		<title>GreenUs</title>
+		<link href="css/index.css" rel="stylesheet">
 	</head>
-	
-	<style>
-		@font-face{
-			font-family: HelveBold;
-			src: url('fonts/HelveBold.ttf');
-		}
-		
-		body{
-			background-image: url('images/Background.png');
-			background-attachment: absolute;
-			background-size: 100%;
-		}
-		
-		#logo{
-			position:absolute;
-			
-			width:120px;
-			height:auto;
-			left:2%;
-			top:2%;
-		}
-		
-		#welcome{
-			position:absolute;
-			left:17%;
-			bottom:8em;
-		}
-		
-		#GetStarted{
-			width:200px;
-			height:auto;
-			
-			position:fixed;
-			left:18%;
-			bottom:4em;
-			z-index:-1;
-		}
-		
-		#txtGetStarted{
-			font-family:HelveBold;
-			font-size:26px;
-			text-decoration:none;
-			color:white;
-			
-			position:absolute;
-			text-align:left;
-			margin-top:35.5%;
-			margin-left:19.6%;
-			z-index:1;
-			
-		}
-		
-		#SignUp{
-			width:120px;
-			height:auto;
-			
-			position:absolute;
-			top:0.75em;
-			right:8em;
-		}
-		
-		#txtSignUp{
-			font-family:HelveBold;
-			font-size:22px;
-			color:white;
-			text-decoration:none;
-			
-			position:absolute;
-			text-align:left;
-			margin-top:0.6em;
-			margin-left:49.9em;
-			z-index:1;
-		}
-		
-		#txtSignIn{
-			font-family:HelveBold;
-			font-size:22px;
-			color:#2FA86A;
-			
-			position:absolute;
-			text-align:left;
-			margin-top:0.6em;
-			margin-left:55em;
-		}
-		
-	</style>
 	
 	<body>
 		<img src="images/logo.png" id="logo">
 		
-		<img src="images/Welcome01.png" id="welcome">
+		<div class="screen 01">
+			<img src="images/Background.png" class="background">
+			<img src="images/Welcome01.png" id="welcome">
+			
+			<a href="main_page.html" id="txtGetStarted">Get Started</a>
+			<img src="images/GetStarted.png" id="GetStarted">
+			
+			<a href="signup.html" id="txtSignUp">Sign Up</a>
+			<img src="images/SignUp.png" id="SignUp">
+			
+			<a href="sigin.html" id="txtSignIn">Sign In</a>
+		</div>
 		
-		<a href="main_page.html" id="txtGetStarted">Get Started</a>
-		<img src="images/GetStarted.png" id="GetStarted">
-		
-		<a href="signup.html" id="txtSignUp">Sign Up</a>
-		<img src="images/SignUp.png" id="SignUp">
-		
-		<div id="txtSignIn">Sign In</div>
+		<div class="screen 02">
+			<p>Great suggestion for beginners</p>
+			<div>Description goes here</div>
+		</div>
 	</body>
+	
+	<script>
+		filter("01");
+		
+		function filter(c){
+				<!-- Contain all categories -->
+				var x=document.getElementsByClassName("screen");
+				
+				<!-- Exist in every categories -->
+				if (c=="all") c="";
+				
+				<!-- Add the show class (display:block) to the filtered elements, and remove from the others -->
+				for (var i=0;i<x.length;i++){	
+					removeClass(x[i],"show");
+					if (x[i].className.indexOf(c) > -1) addClass(x[i],"show");
+				}	
+			}
+			
+			function addClass(element, name){
+				<!-- Split the name of element to words to check if it's contained name part -->
+				var arr1 = element.className.split(" ");
+				
+				<!-- Array contains classes will be added to the name of element -->
+				var arr2 = name.split(" ");
+				
+				<!-- Add name to elements' name -->
+				for (var i=0;i<arr2.length;i++){
+					if (arr1.indexOf(arr2[i])==-1){
+						element.className += " " + arr2[i];
+					}
+				}
+			}
+			
+			function removeClass(element,name){
+				<!-- Split the name of element to words to check if it's contained name part -->
+				var arr1 = element.className.split(" ");
+				
+				<!-- Array contains classes will be removed from the name of element -->
+				var arr2 = name.split(" ");
+				
+				<!-- Remove name from elements' name -->
+				for (var i=0;i<arr2.length;i++){
+					while (arr1.indexOf(arr2[i]) > -1){
+						<!-- Remove 1 items at positon with indexOf(arr2[i]) in arr1 -->
+						arr1.splice(arr1.indexOf(arr2[i]),1); 
+					}
+				}
+				
+				<!-- Merge the element's name array -->
+				element.className = arr1.join(" ");
+			}
+	</script>
 </html>
