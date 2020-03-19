@@ -2,114 +2,8 @@
 <html>
 	<head>
 		<title>Sign Up</title>
+		<link href="css/signup.css" rel="stylesheet">
 	</head>
-	
-	<style>
-		@font-face{
-			font-family: Abel;
-			src: url('fonts/VL_AbelPro.ttf');
-		}
-		
-		body{
-			background-image: url('images/BackgroundSignUp.png');
-			background-attachment: fixed;
-			background-size: 100%;
-		}
-		
-		#welcome{
-			position:absolute;
-			left:14%;
-			top:32%;
-		}
-		
-		#signup{
-			width:250px;
-			height:auto;
-			
-			position:absolute;
-			top:65%;
-			left:18.8%;
-		}
-		
-		.text{
-			width:auto;
-			height:30px;
-			
-			font-family:Abel;
-			font-size:30px;
-			margin-top:20px;
-			margin-bottom:10px;
-			margin-left: 65%;
-		}
-		
-		#button{
-			position:absolute;
-			bottom:9%;
-			right:18%;
-		}
-		
-		#confirm{
-			width:auto;
-			height:50px;
-			text-align: left;
-			font-family:Abel;
-			font-size:30px;
-			margin-left:64%;
-			margin-top:15px;
-			margin-bottom:5px;
-			
-			
-		}
-		
-		#terms{
-			text-decoration:none;
-			font-family:Abel;
-			text-align: left;
-			font-size:30px;
-			margin-left: 69%;
-			margin-top:5px;
-			margin-bottom:25px;
-
-		}
-		
-		#txtSignUp{
-			font-family:Abel;
-			font-size:24px;
-			color:white;
-			text-decoration:none;
-			
-			position:absolute;
-			text-align:left;
-			bottom:11.9%;
-			right:16.8%;
-			padding-top:12em;
-			padding-right:2em;
-			z-index:1;
-		}
-
-		#blank{
-			width:auto;
-			height:30px;
-			
-			font-family:Abel;
-			font-size:30px;
-			top:10em;
-			margin-top:10px;
-			margin-bottom:10px;
-			margin-left: 65%;
-
-		}
-
-		#logo{
-			position:absolute;
-			
-			width:120px;
-			height:auto;
-			left:2%;
-			top:2%;
-		}
-
-	</style>
 	
 	<body>
 		<img src="images/logo.png" id="logo">
@@ -118,21 +12,24 @@
 		
 		<img src="images/CreateAccount.png" id="signup">
 		
-		<div class="text">Account</div>
-		<input type="text" id="blank">
-		
-		<div class="text">Password</div>
-		<input type="password" id="blank">
-		
-		<div class="text">Confirm Password</div>
-		<input type="password" id="blank">
+		<div id="register">
+			<div class="text">Account</div>
+			<input type="text" id="blank">
 			
-		<img src="images/SignUp.png" id="button">
-		
-		<div id="confirm">By signing up, I agree with</div>
-		<a href="#" id="terms">terms of service</a>
-		
-		<a href="signup.html" id="txtSignUp">Sign Up</a>
+			<div class="text">Password</div>
+			<input type="password" id="pass">
+			
+			<div class="text">Confirm Password</div>
+			<input type="password" id="passcfm">
+			
+			<div id="confirm">By signing up, I agree with</div>
+			<a href="#" id="terms">terms of service</a>
+			
+			<div id="SignUpBtn">
+				<a href="signup.html" id="txtSignUp">Sign Up</a>
+				<img src="images/SignUp.png" class="button">
+			</div>
+		</div>
 	</body>
 	
 </html>
