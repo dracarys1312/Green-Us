@@ -51,66 +51,89 @@ body{
 #welcome{
 	position:absolute;
 	left:17%;
-	top:12em;
+	top:240px;
 }
 
-#GetStarted{
-	width:200px;
-	height:auto;
-	
+.button{
+	width:100%;
+	height:100%;
 	position:absolute;
-	left:18%;
-	top:23em;
-	z-index:-1;
+	z-index:0;
 }
 
-#txtGetStarted{
-	font-family:HelveBold;
-	font-size:26px;
-	text-decoration:none;
-	color:white;
-	
+.button img{
+	width:100%;
+	object-fit:cover;
+}
+
+#GetStartedBtn{
+	width:220px;
+	height:60px;
 	position:absolute;
-	text-align:left;
-	left:10.5em;
-	top:18em;
-	opacity:0.9;
 	
-	z-index:1;
+	left:230px;
+	top:450px;
+	z-index:0;
 	
+	opacity:0.8;
 }
 
-#SignUp{
-	width:120px;
-	height:auto;
-	
+#SignUpBtn{
+	width:130px;
+	height:50px;
 	position:absolute;
 	top:0.75em;
-	right:8em;
+	
+	right:170px;
+	float:left;
 }
 
-#txtSignUp{
+#SignInBtn{
+	width:130px;
+	height:50px;
+	position:absolute;
+	top:0.75em;
+	right:35px;
+	float:left;
+}
+
+#GetStartedBtn a{
+	font-family:HelveBold;
+	font-size:30px;
+	color:white;
+	text-decoration:none;
+	
+	position:absolute;
+	margin-top:6px;
+	margin-left:28px;
+	
+	z-index:1;
+}
+
+#SignUpBtn a{
 	font-family:HelveBold;
 	font-size:22px;
 	color:white;
 	text-decoration:none;
 	
 	position:absolute;
-	top:0.9em;
-	left:49.45em;
+	margin-top:7px;
+	margin-left:25px;
+	
 	z-index:1;
 }
 
-#txtSignIn{
+#SignInBtn a{
 	font-family:HelveBold;
 	font-size:22px;
 	color:#2FA86A;
 	text-decoration:none;
 	
 	position:absolute;
-	top:0.9em;
-	left:55em;
+	margin-top:7px;
+	margin-left:25px;
 	z-index:1;
 }
+
 
 /* Screen 2 */

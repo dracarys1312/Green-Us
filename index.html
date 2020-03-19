@@ -9,16 +9,22 @@
 		<img src="images/logo.png" id="logo">
 		
 		<div class="screen 01">
-			<img src="images/Background.png" class="background">
-			<img src="images/Welcome01.png" id="welcome">
+			<img src="images/Background.png" class="background"></div>
+			<img src="images/Welcome01.png" id="welcome"></div>
 			
-			<a href="main_page.html" id="txtGetStarted">Get Started</a>
-			<img src="images/GetStarted.png" id="GetStarted">
+			<div id="GetStartedBtn">
+				<a href="main_page.html">Get Started</a>
+				<img src="images/GetStarted.png" class="button">
+			</div>
 			
-			<a href="signup.html" id="txtSignUp">Sign Up</a>
-			<img src="images/SignUp.png" id="SignUp">
+			<div id="SignUpBtn">
+				<a href="signup.html" id="txtSignUp">Sign Up</a>
+				<img src="images/SignUp.png" class="button">
+			</div>
 			
-			<a href="sigin.html" id="txtSignIn">Sign In</a>
+			<div id="SignInBtn">
+				<a href="sigin.html" id="txtSignIn">Sign In</a>
+			</div>
 		</div>
 		
 		<div class="screen 02">
@@ -27,10 +33,11 @@
 		</div>
 	</body>
 	
+	
 	<script>
-		filter("01");
+		change_screen("01");
 		
-		function filter(c){
+		function change_screen(c){
 				<!-- Contain all categories -->
 				var x=document.getElementsByClassName("screen");
 				
@@ -42,40 +49,40 @@
 					removeClass(x[i],"show");
 					if (x[i].className.indexOf(c) > -1) addClass(x[i],"show");
 				}	
-			}
+		}
+		
+		function addClass(element, name){
+			<!-- Split the name of element to words to check if it's contained name part -->
+			var arr1 = element.className.split(" ");
 			
-			function addClass(element, name){
-				<!-- Split the name of element to words to check if it's contained name part -->
-				var arr1 = element.className.split(" ");
-				
-				<!-- Array contains classes will be added to the name of element -->
-				var arr2 = name.split(" ");
-				
-				<!-- Add name to elements' name -->
-				for (var i=0;i<arr2.length;i++){
-					if (arr1.indexOf(arr2[i])==-1){
-						element.className += " " + arr2[i];
-					}
+			<!-- Array contains classes will be added to the name of element -->
+			var arr2 = name.split(" ");
+			
+			<!-- Add name to elements' name -->
+			for (var i=0;i<arr2.length;i++){
+				if (arr1.indexOf(arr2[i])==-1){
+					element.className += " " + arr2[i];
+				}
+			}
+		}
+		
+		function removeClass(element,name){
+			<!-- Split the name of element to words to check if it's contained name part -->
+			var arr1 = element.className.split(" ");
+			
+			<!-- Array contains classes will be removed from the name of element -->
+			var arr2 = name.split(" ");
+			
+			<!-- Remove name from elements' name -->
+			for (var i=0;i<arr2.length;i++){
+				while (arr1.indexOf(arr2[i]) > -1){
+					<!-- Remove 1 items at positon with indexOf(arr2[i]) in arr1 -->
+					arr1.splice(arr1.indexOf(arr2[i]),1); 
 				}
 			}
 			
-			function removeClass(element,name){
-				<!-- Split the name of element to words to check if it's contained name part -->
-				var arr1 = element.className.split(" ");
-				
-				<!-- Array contains classes will be removed from the name of element -->
-				var arr2 = name.split(" ");
-				
-				<!-- Remove name from elements' name -->
-				for (var i=0;i<arr2.length;i++){
-					while (arr1.indexOf(arr2[i]) > -1){
-						<!-- Remove 1 items at positon with indexOf(arr2[i]) in arr1 -->
-						arr1.splice(arr1.indexOf(arr2[i]),1); 
-					}
-				}
-				
-				<!-- Merge the element's name array -->
-				element.className = arr1.join(" ");
-			}
+			<!-- Merge the element's name array -->
+			element.className = arr1.join(" ");
+		}
 	</script>
 </html>
