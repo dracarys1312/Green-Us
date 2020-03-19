@@ -29,8 +29,8 @@ body{
 	height:auto;
 	
 	position:absolute;
-	top:58%;
-	left:15%;
+	top:59%;
+	left:18%;
 }
 
 #register{
@@ -62,7 +62,7 @@ body{
 	font-size:30px;
 	text-align:left;
 	
-	margin-left:880px;
+	margin-left:775px;
 	margin-top:15px;
 	margin-bottom:5px;
 }
