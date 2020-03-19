@@ -1,0 +1,116 @@
+@font-face{
+	font-family: HelveBold;
+	src: url('../fonts/HelveBold.ttf');
+}
+
+body{
+	width:100%;
+	height:100%;
+	margin:0;
+}
+
+#logo{
+	position:absolute;
+	
+	width:120px;
+	height:auto;
+	left:2%;
+	top:2%;
+	
+	z-index:2;
+}
+
+/* Transition */
+
+
+/*Appearance*/
+.screen{
+	width:100%;
+	height:100%;
+	position:relative;
+	display:none;
+}
+
+.show{
+	display:block;
+}
+
+/* Screen 1 */
+.background{
+	width:100%;
+	height:100%;
+}
+
+.background img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	z-index:-1;
+}
+
+#welcome{
+	position:absolute;
+	left:17%;
+	top:12em;
+}
+
+#GetStarted{
+	width:200px;
+	height:auto;
+	
+	position:absolute;
+	left:18%;
+	top:23em;
+	z-index:-1;
+}
+
+#txtGetStarted{
+	font-family:HelveBold;
+	font-size:26px;
+	text-decoration:none;
+	color:white;
+	
+	position:absolute;
+	text-align:left;
+	left:10.5em;
+	top:18em;
+	opacity:0.9;
+	
+	z-index:1;
+	
+}
+
+#SignUp{
+	width:120px;
+	height:auto;
+	
+	position:absolute;
+	top:0.75em;
+	right:8em;
+}
+
+#txtSignUp{
+	font-family:HelveBold;
+	font-size:22px;
+	color:white;
+	text-decoration:none;
+	
+	position:absolute;
+	top:0.9em;
+	left:49.45em;
+	z-index:1;
+}
+
+#txtSignIn{
+	font-family:HelveBold;
+	font-size:22px;
+	color:#2FA86A;
+	text-decoration:none;
+	
+	position:absolute;
+	top:0.9em;
+	left:55em;
+	z-index:1;
+}
+
+/* Screen 2 */
