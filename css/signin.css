@@ -1,0 +1,119 @@
+@font-face{
+	font-family: Abel;
+	src: url('../fonts/VL_AbelPro.ttf');
+}
+
+body{
+	background-image: url('../images/BackgroundSignUp.png');
+	background-attachment: fixed;
+	background-size: 100%;
+}
+
+#logo{
+	position:absolute;
+	
+	width:120px;
+	height:auto;
+	left:2%;
+	top:2%;
+}
+
+#welcome{
+	position:absolute;
+	left:14%;
+	top:32%;
+}
+
+#signin{
+	width:250px;
+	height:auto;
+	
+	position:absolute;
+	top:59%;
+	left:18%;
+}
+
+#login{
+	height:470px;
+	position:relative;
+	top:60px;
+	right:50px;
+}
+
+.text{
+	width:auto;
+	height:30px;
+	
+	font-family:Abel;
+	font-size:30px;
+	margin-top:55px;
+	margin-bottom:10px;
+	margin-left: 65%;
+}
+
+#button{
+	position:absolute;
+	bottom:9%;
+	right:18%;
+}
+
+#button2{
+	position:absolute;
+	bottom:35%;
+	left:18%;
+}
+
+#forgot{
+    text-decoration:none;
+	font-family:Abel;
+	font-size:30px;
+	text-align:left;
+	
+	margin-left:780px;
+	margin-top:40px;
+	margin-bottom:10px;
+}
+
+#SignInBtn{
+	width:130px;
+	height:50px;
+	
+	position:absolute;
+	bottom:60px;
+	right:19%;
+}
+
+#SignUpBtn{
+	width:130px;
+	height:50px;
+	
+	position:absolute;
+	bottom:60px;
+	left:19%;
+}
+
+#SigninBtn a{
+	font-family:Abel;
+	font-size:26px;
+	color:white;
+	text-decoration:none;
+	
+	position:absolute;
+	margin-top:13px;
+	margin-left:32px;
+	
+	z-index:1;
+}
+
+input{
+	width:auto;
+	height:30px;
+	
+	font-family:Abel;
+	font-size:30px;
+	top:10em;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left: 65%;
+
+}
