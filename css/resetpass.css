@@ -4,10 +4,7 @@
 }
 
 body{
-	background-image: url('../images/Background.png');
-	background-attachment: fixed;
-	background-size: 100%;
-	
+	margin:0;
 }
 
 #logo{
@@ -19,13 +16,27 @@ body{
 	top:2%;
 }
 
+.background{
+	width:100%;
+	height:100%;
+	opacity:0.3;
+}
+
+.background img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	
+	z-index:-1;
+}
+
 #welcome{
 	position:absolute;
 	left:14%;
 	top:30%;
 }
 
-#signup{
+#reset{
 	width:250px;
 	height:auto;
 	
@@ -34,13 +45,13 @@ body{
 	left:18%;
 }
 
-#login{
-	height:470px;
-	position:relative;
-	top:60px;
-	right:50px;
+#ResetZone{
+	width:280px;
+	height:350px;
+	position:absolute;
+	top:120px;
+	right:250px;
 }
-
 
 .text{
 	width:auto;
@@ -50,35 +61,6 @@ body{
 	font-size:30px;
 	margin-top:10px;
 	margin-bottom:5px;
-	margin-left: 65%;
-}
-
-#button{
-	position:absolute;
-	bottom:9%;
-	right:18%;
-}
-
-#SignInBtn{
-	width:130px;
-	height:50px;
-	
-	position:absolute;
-	bottom:8px;
-	right:19%;
-}
-
-#SigninBtn a{
-	font-family:Abel;
-	font-size:26px;
-	color:white;
-	text-decoration:none;
-	
-	position:absolute;
-	margin-top:13px;
-	margin-left:32px;
-	
-	z-index:1;
 }
 
 input{
@@ -90,6 +72,27 @@ input{
 	top:10em;
 	margin-top:10px;
 	margin-bottom:10px;
-	margin-left: 65%;
 
+}
+
+#ConfirmBtn{
+	width:130px;
+	height:50px;
+	
+	position:absolute;
+	bottom:8px;
+	left:70px;
+}
+
+#ConfirmBtn a{
+	font-family:Abel;
+	font-size:26px;
+	color:white;
+	text-decoration:none;
+	
+	position:absolute;
+	margin-top:13px;
+	margin-left:32px;
+	
+	z-index:1;
 }
