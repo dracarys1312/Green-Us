@@ -4,9 +4,10 @@
 }
 
 body{
-	background-image: url('../images/BackgroundSignUp.png');
+	background-image: url('../images/Background.png');
 	background-attachment: fixed;
 	background-size: 100%;
+	
 }
 
 #logo{
@@ -53,20 +54,21 @@ body{
 
 #button{
 	position:absolute;
-	bottom:9%;
+	bottom:12%;
 	right:18%;
 }
 
 #button2{
 	position:absolute;
 	bottom:35%;
-	left:18%;
+	left:100px;
 }
 
 #forgot{
     text-decoration:none;
 	font-family:Abel;
 	font-size:30px;
+	color: white;
 	text-align:left;
 	
 	margin-left:780px;
@@ -79,7 +81,7 @@ body{
 	height:50px;
 	
 	position:absolute;
-	bottom:60px;
+	bottom:70px;
 	right:19%;
 }
 
@@ -89,7 +91,7 @@ body{
 	
 	position:absolute;
 	bottom:60px;
-	left:19%;
+	left:-530px;
 }
 
 #SigninBtn a{
