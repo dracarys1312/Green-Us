@@ -24,7 +24,7 @@ body{
 	top:32%;
 }
 
-#signin{
+#signup{
 	width:250px;
 	height:auto;
 	
@@ -46,7 +46,7 @@ body{
 	
 	font-family:Abel;
 	font-size:30px;
-	margin-top:55px;
+	margin-top:20px;
 	margin-bottom:10px;
 	margin-left: 65%;
 }
@@ -57,21 +57,25 @@ body{
 	right:18%;
 }
 
-#button2{
-	position:absolute;
-	bottom:35%;
-	left:18%;
-}
-
-#forgot{
-    text-decoration:none;
+#confirm{
 	font-family:Abel;
 	font-size:30px;
 	text-align:left;
 	
-	margin-left:780px;
-	margin-top:40px;
-	margin-bottom:10px;
+	margin-left:775px;
+	margin-top:15px;
+	margin-bottom:5px;
+}
+
+#terms{
+	text-decoration:none;
+	font-family:Abel;
+	text-align: left;
+	font-size:30px;
+	margin-left: 69%;
+	margin-top:5px;
+	margin-bottom:25px;
+
 }
 
 #SignInBtn{
@@ -79,33 +83,11 @@ body{
 	height:50px;
 	
 	position:absolute;
-	bottom:60px;
+	bottom:5px;
 	right:19%;
 }
 
-#SignUpBtn{
-	width:130px;
-	height:50px;
-	
-	position:absolute;
-	bottom:60px;
-	left:19%;
-}
-
 #SigninBtn a{
-	font-family:Abel;
-	font-size:26px;
-	color:white;
-	text-decoration:none;
-	
-	position:absolute;
-	margin-top:13px;
-	margin-left:32px;
-	
-	z-index:1;
-}
-
-#SignupBtn a{
 	font-family:Abel;
 	font-size:26px;
 	color:white;
