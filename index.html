@@ -8,81 +8,21 @@
 	<body>
 		<a href="index.html"><img src="images/logo.png" id="logo"></a>
 		
-		<div class="screen 01">
-			<img src="images/Background.png" class="background"></div>
-			<img src="images/Welcome01.png" id="welcome"></div>
-			
-			<div id="GetStartedBtn">
-				<a href="main_page.html">Get Started</a>
-				<img src="images/GetStarted.png" class="button">
-			</div>
-			
-			<div id="SignUpBtn">
-				<a href="signup.html">Sign Up</a>
-				<img src="images/SignUp.png" class="button">
-			</div>
-			
-			<div id="SignInBtn">
-				<a href="signin.html">Sign In</a>
-			</div>
+		<img src="images/Background.png" class="background"></div>
+		<img src="images/Welcome01.png" id="welcome"></div>
+		
+		<div id="GetStartedBtn">
+			<a href="main_page.html">Get Started</a>
+			<img src="images/GetStarted.png" class="button">
 		</div>
 		
-		<div class="screen 02">
-			<p>Great suggestion for beginners</p>
-			<div>Description goes here</div>
+		<div id="SignUpBtn">
+			<a href="signup.html">Sign Up</a>
+			<img src="images/SignUp.png" class="button">
+		</div>
+		
+		<div id="SignInBtn">
+			<a href="signin.html">Sign In</a>
 		</div>
 	</body>
-	
-	
-	<script>
-		change_screen("01");
-		
-		function change_screen(c){
-				<!-- Contain all categories -->
-				var x=document.getElementsByClassName("screen");
-				
-				<!-- Exist in every categories -->
-				if (c=="all") c="";
-				
-				<!-- Add the show class (display:block) to the filtered elements, and remove from the others -->
-				for (var i=0;i<x.length;i++){	
-					removeClass(x[i],"show");
-					if (x[i].className.indexOf(c) > -1) addClass(x[i],"show");
-				}	
-		}
-		
-		function addClass(element, name){
-			<!-- Split the name of element to words to check if it's contained name part -->
-			var arr1 = element.className.split(" ");
-			
-			<!-- Array contains classes will be added to the name of element -->
-			var arr2 = name.split(" ");
-			
-			<!-- Add name to elements' name -->
-			for (var i=0;i<arr2.length;i++){
-				if (arr1.indexOf(arr2[i])==-1){
-					element.className += " " + arr2[i];
-				}
-			}
-		}
-		
-		function removeClass(element,name){
-			<!-- Split the name of element to words to check if it's contained name part -->
-			var arr1 = element.className.split(" ");
-			
-			<!-- Array contains classes will be removed from the name of element -->
-			var arr2 = name.split(" ");
-			
-			<!-- Remove name from elements' name -->
-			for (var i=0;i<arr2.length;i++){
-				while (arr1.indexOf(arr2[i]) > -1){
-					<!-- Remove 1 items at positon with indexOf(arr2[i]) in arr1 -->
-					arr1.splice(arr1.indexOf(arr2[i]),1); 
-				}
-			}
-			
-			<!-- Merge the element's name array -->
-			element.className = arr1.join(" ");
-		}
-	</script>
 </html>

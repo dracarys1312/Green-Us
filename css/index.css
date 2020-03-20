@@ -20,21 +20,6 @@ body{
 	z-index:2;
 }
 
-/* Transition */
-
-
-/*Appearance*/
-.screen{
-	width:100%;
-	height:100%;
-	position:absolute;
-	display:none;
-}
-
-.show{
-	display:block;
-}
-
 /* Screen 1 */
 .background{
 	width:100%;
