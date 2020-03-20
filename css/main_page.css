@@ -49,8 +49,10 @@ body{
 #collection{
 	margin-left:20px;
 	margin-top:10px;
+	margin-bottom:20px;
+	
 	width:93.5%;
-	height:590px;
+	height:auto;
 	float:left;
 	z-index:-1;
 }
@@ -75,7 +77,7 @@ body{
 
 /*Button*/
 #button{
-	width:100%;
+	width:90%;
 	height:30;
 	float:right;
 }
