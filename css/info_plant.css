@@ -1,0 +1,96 @@
+body{
+	margin:0;
+	font-family:'ABeeZee', sans-serif;
+}
+
+/* Info Box */
+#InfoBox{
+	width:100%;
+	height:60%;
+	position:absolute;
+	z-index:-1;
+}
+
+#photo{
+	width:250px;
+	height:250px;
+	
+	position:absolute;
+	margin-top:60px;
+	margin-left:200px;
+	margin-bottom:30px;
+	
+	z-index:2;
+}
+
+#photo img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+#name{
+	font-size:64px;
+	
+	margin-left:500px;
+	margin-top:50px;
+	margin-bottom:10px;
+}
+
+#feature{
+	width:200px;
+	height:350px;
+	font-size:30px;
+	
+	float:left;
+	margin-left:500px;
+}
+
+.cat{
+	margin-bottom:10px;
+}
+
+#detail{
+	position:absolute;
+	width:500px;
+	height:350px;
+	font-size:30px;
+	
+	float:left;
+	margin-left:650px;
+}
+
+.info{
+	margin-bottom:10px;
+}
+
+/* Part of Diary */
+#diary{
+	background-color:#F1EDED;
+	width:100%;
+	height:40%;
+	position:absolute;
+	bottom:0;
+}
+
+#diary a{
+	float:right;
+	margin-right:10px;
+	margin-top:10px;
+	text-decoration:none;
+	color:black;
+}
+
+#diary a:hover{
+	color:gray;
+}
+
+#writing{
+	margin-top:35px;
+}
+
+#diary p{
+	margin-left:40px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
