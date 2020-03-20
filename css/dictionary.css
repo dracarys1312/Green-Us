@@ -1,0 +1,121 @@
+@font-face{
+	font-family:HelveBold;
+	src: url('../fonts/HelveBold.ttf');
+}
+
+body{
+	margin:0;
+}
+
+h1{
+	font-family:HelveBold;
+	font-size:52px;
+	
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:10px;
+}
+
+/* Panel */
+#panel{
+	width:80px;
+	height:100%;
+	
+	position: relative;
+	float:left;
+	margin-left:-70;
+	
+	z-index:1;
+}
+
+@keyframes mymove{
+  from {left: 0px;}
+  to {left: 70px;}
+}
+
+#panel:hover{
+	animation: mymove 1.5s;
+	animation-fill-mode: both;
+}
+
+.icon{
+	width:60px;
+	height:60px;
+	background-color:white;
+	border-radius:50%;
+	
+	margin:9px;
+	text-align:center;
+	
+}
+
+.icon img{
+	width:100%;
+	height:100%;
+	border-radius:50%;
+	object-fit:cover;
+	
+	display:inline-block;
+    margin-top:2px;
+}
+
+/* Main Part */
+#data{
+	margin-left:20px;
+	margin-top:10px;
+	margin-bottom:20px;
+	width:93.5%;
+	height:auto;
+	float:left;
+	z-index:-1;
+}
+
+/* Tool Panel */
+#tool_panel{
+	width:100%;
+}
+
+/* Search Box */
+#search{
+	font-size:20px;
+	width:350px;
+	margin-left:80px;
+}
+
+/* Sorting */
+#sorting{
+	font-size:18px;
+	margin-left:400px;
+}
+
+/* Info */
+.plant{
+	width:190px;
+	height:190px;
+	margin-top:20px;
+	margin-left:55px;
+	float:left;
+	
+	background-color:brown;
+	/* border:1px solid; */
+	/* border-color:#F1EDED; */
+}
+
+.plant img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+/*Button*/
+#button{
+	width:90%;
+	height:auto;
+	float:right;
+}
+
+#button img{
+	float:right;
+	margin-right:10px;
+	width:20px;
+}
