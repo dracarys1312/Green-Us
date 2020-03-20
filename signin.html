@@ -6,11 +6,19 @@
 	</head>
 	
 	<body>
-		<img src="images/logo.png" id="logo">
+		<a href="index.html"><img src="images/logo.png" id="logo" style="z-index:1"></a>
+
+		<img src="images/Background.png" class="background"></div>
 
         <img src="images/Welcome02.png" id="welcome">
         
-        <img src="images/NotHaveAcc.png" id="signin">
+		<div id="SignUpZone">
+			<img src="images/NotHaveAcc.png" id="signup">
+			<div id="SignUpBtn">
+				<a href="signup.html" id="txtSignUp">Sign Up</a>
+				<img src="images/SignUp.png">
+			</div>
+		</div>
 		
 		<div id="login">
 			<div class="text">Account</div>
@@ -19,18 +27,12 @@
 			<div class="text">Password</div>
             <input type="password" id="pass">
 
-            <div id="forgot">Forgot your password?</div>
+            <div id="forgot"><a href="resetpass.html">Forgot your password?</a></div>
             
             <div id="SignInBtn">
 				<a href="signin.html" id="txtSignIn">Sign In</a>
-                <img src="images/SignUp.png" class="button">
-            
-            <div id="SignUpBtn">
-                <a href="signup.html" id="txtSignUp">Sign Up</a>
-                <img src="images/SignUp.png" class="button2">
-            
-			
-			</div>
+                <img src="images/SignUp.png">
+            </div>
 		</div>
 	</body>
 	
