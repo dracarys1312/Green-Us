@@ -57,6 +57,17 @@ body{
 	z-index:-1;
 }
 
+@keyframes select{
+	from{
+		margin-top:0px;
+		margin-left:0px;
+	}
+	to{
+		margin-top:10px;
+		margin-left:10px;
+	}
+}
+
 .plant{
 	width:190px;
 	height:250px;
@@ -65,8 +76,13 @@ body{
 	float:left;
 	
 	background-color:brown;
-	/* border:1px solid; */
-	/* border-color:#F1EDED; */
+	border:1px solid;
+	border-color:#F1EDED;
+}
+
+.plant img:hover{
+	animation:select 0.5s;
+	animation-fill-mode:both;
 }
 
 .plant img{
