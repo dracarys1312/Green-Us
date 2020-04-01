@@ -20,35 +20,124 @@
 		<div class="column">
 			<div id="planting">
 				<img src="images/icons/planting.png">
-				<div>Planting</div>
+				<div onclick="open_modal('planting_modal',0)">Planting</div>
 			</div>
 			
 			<div id="watering">
 				<img src="images/icons/watering.png">
-				<div>Watering</div>
+				<div onclick="open_modal('watering_modal',1)">Watering</div>
 			</div>
 			
 			<div id="sun_req">
 				<img src="images/icons/weather.png">
-				<div>Sun requirement</div>
+				<div onclick="open_modal('sun_req_modal',2)">Sun requirement</div>
 			</div>
 		</div>
 		
 		<div class="column">
 			<div id="pruning">
 				<img src="images/icons/pruning.png">
-				<div>Pruning and Training</div>
+				<div onclick="open_modal('pruning_modal',3)">Pruning and Training</div>
 			</div>
 			
 			<div id="propagating">
 				<img src="images/icons/propagating.png">
-				<div>Propagating</div>
+				<div onclick="open_modal('propagating_modal',4)">Propagating</div>
 			</div>
 
 			<div id="problem">
 				<img src="images/icons/problems.png">
-				<div>Problems</div>
+				<div onclick="open_modal('problem_modal',5)">Problems</div>
 			</div>
 		</div>
+		
+		<!-- Modal -->
+		<div id="planting_modal" class="modal">
+		
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Planting</h1>
+				<p>Planting time: Spring, Autumn</p>
+		  	</div>
+		
+		</div>
+		
+		<div id="watering_modal" class="modal">
+		
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Watering</h1>
+				<p>Plants are drought tolerant, but watering in dry periods will encourage further flowering</p>
+		  	</div>
+		
+		</div>
+		
+		<div id="sun_req_modal" class="modal">
+		
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Sun Requirements</h1>
+				<p>Sun or Partial Shade</p>
+		  	</div>
+		
+		</div>
+		
+		<div id="pruning_modal" class="modal">
+		
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Pruning and Training</h1>
+				<p>Pruning and Training Modal..</p>
+		  	</div>
+		
+		</div>
+		
+		<div id="propagating_modal" class="modal">
+		
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Propagating</h1>
+				<p>Propagating Modal..</p>
+		  	</div>
+		
+		</div>
+		
+		<div id="problem_modal" class="modal">
+		
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Problems</h1>
+				<p>Problems Modal..</p>
+		  	</div>
+		
+		</div>
+		
+		<script>
+			function open_modal(modal_id,span_id){
+				var modal = document.getElementById(modal_id);
+				var span = document.getElementsByClassName("close")[span_id]; // Get the <span> element that closes the modal
+				
+				// Open the modal when clicked
+				modal.style.display = "block";
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+			}
+		</script>
 	</body>
 </html>
