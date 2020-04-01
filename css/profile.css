@@ -10,7 +10,7 @@ body{
 	
 	position: relative;
 	float:left;
-	margin-left:-70;
+	margin-left:-70px;
 	
 	z-index:1;
 }
