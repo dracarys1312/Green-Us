@@ -1,51 +1,55 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 	<head>
 		<title>GreenUs</title>
 		<link href="css/info.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
-		<!-- <link href="images/logo.png" rel="icon"> -->
 	</head>
 	
 	<body>
-		<!-- Back Arrow -->
-		<a href="dictionary.html"><img src="images/left-arrow.png" width="50px" style="margin:10px;position:absolute;"></a>
-	
+		<!-- Panel -->
+		<div id="panel">
+			<div class="icon"><a href="profile.html" target="_blank"><img src="images/avatar.jpg"></a></div>
+			<div class="icon"><a href="main_page.html"><img src="images/icons/garden.png"></a></div>
+			<div class="icon"><a href="dictionary.html"><img src="images/icons/dictionary.png"></a></div>
+			<div class="icon"><a href="#"><img src="images/icons/weather.png"></a></div>
+		</div>
+		
 		<!-- Image -->
-		<div id="photo"><img src="images/sunflower.jpg"></div>
+		<div id="photo"><img src="images/Alstroemeria.jpg"></div>
 		
 		<!-- Info Box -->
 		<div id="info">
 			<!-- Name -->
-			<div id="name">SUNFLOWER</div>
+			<div id="common_name">Peruvian Lilies</div>
 			
 			<!-- Info -->
-			<div id="feature">
-				<div class="cat">Difficulty:</div>
-				<div class="cat">Season:</div>
-				<div class="cat">Temperature:</div>
-				<div class="cat">Properties:</div>
-				<div class="cat">Meaning:</div>
+			<div class="feature">
+				<div class="feature_names">Other name(s):</div>
+				<div id="name">Alstroemeria</div>
 			</div>
 			
-			<!-- Detail -->
-			<div id="detail">
-				<!-- Difficulty -->
-				<img src="images/star.png" class="info star">
-				<img src="images/star.png" class="info star">
-				
-				<!-- Season -->
-				<div class="info season">Summer</div>
-				
-				<!-- Temperature -->
-				<div class="info temp">70-78 degrees Fahrenheit</div>
-				
-				<!-- Properties -->
-				<div class="info properties">N/A</div>
-				
-				<!-- Meaning -->
-				<div class="info meaning">“Happy” flowers, making them the perfect gift to bring joy to someone's (or your) day.</div>
+			<div class="feature">
+				<div class="feature_names">Type:</div>
+				<div id="type">Herb/Forb</div>
+			</div>
+			
+			<div class="feature">
+				<div class="feature_names">Difficulty:</div>
+				<div id="difficulty">Easy</div>
+			</div>
+			
+			<div class="feature">
+				<div class="feature_names">Life cycle:</div>
+				<div id="life_cycle">Perenial</div>
+			</div>
+			
+			<div class="feature">
+				<div class="feature_names">Meaning:</div>
+				<div id="meaning">Alstroemeria flower is symbolic of wealth prosperity and fortune. It is also the flower of friendship</div>
 			</div>
 		</div>
+	
+		<img src="images/down-arrow.png" id="down_arrow">
 	</body>
 </html>
