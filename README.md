@@ -54,3 +54,6 @@
 - [chalalala](https://github.com/chalalala) - **Đoàn Tuyết Mai** \<Front-end\>
 - [provodoihi](https://github.com/provodoihi) - **Phùng Kim Sơn** \<Front-end\>
 - [dracarys1312](https://github.com/dracarys1312) - **Nguyễn Phương Thảo** \<Back-end\>
+
+### Icon
+Icon made by Freepik from www.flaticon.com
