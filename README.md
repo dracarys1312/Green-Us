@@ -1,5 +1,8 @@
 # GreenUs
+
 **GreenUs** is a *web-based* gardening app. Our ambition is to give users great experiences with their plants and spread the passion for planting tree to all the people from every ages. We will not only provide **useful information** about plants but also work as a **diary** to keep memories about your little friends.
+
+[![Img](https://img.shields.io/badge/Link-API-red)](https://github.com/dracarys1312/api-GreenUs)
 
 ## Features
 - **User account:**
@@ -41,9 +44,6 @@
 	- Give feedback to developers
 	- Suggest new features
 	- ...
-
-## Link API
-https://github.com/dracarys1312/api-GreenUs
 
 ## Credits
 *Still updating...*
