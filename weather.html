@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Weather</title>
+		<link href="css/weather.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+		<!-- Panel -->
+		<div id="panel">
+			<div class="icon"><a href="profile.html"><img src="images/avatar.jpg"></a></div>
+			<div class="icon"><a href="main_page.html"><img src="images/icons/garden.png"></a></div>
+			<div class="icon"><a href="dictionary.html"><img src="images/icons/dictionary.png"></a></div>
+			<div class="icon"><a href="#"><img src="images/icons/weather.png"></a></div>
+		</div>
+		
+		<div id="weather_box">
+			<div id="header">
+				<div style="float:left;font-size:50px">Weather Forecast</div>
+				<div id="location">Unknown</div>
+			</div>
+			
+			<div id="notification"></div>
+			
+			<div id="container">
+				<!-- <img src="images/weather/planet-earth.png" id="weather-icon"> -->
+				<img src="images/weather/sun.png" id="weather-icon">
+				
+				<div id="temperature">
+					<div id="temp-value">-</div>
+					<img src="images/weather/celsius.png" id="unit">
+				</div>
+				
+				<div id="more_detail">
+					
+				</div>
+				
+				<p id="date"></p>
+			</div>
+		</div>
+	</body>
+	
+	<script>
+		<!-- Display date -->
+		document.getElementById("date").innerHTML = Date();
+	
+
+	</script>
+	
+</html>
