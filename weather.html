@@ -15,39 +15,43 @@
 			<div class="icon"><a href="#"><img src="images/icons/weather.png"></a></div>
 		</div>
 		
-		<div id="weather_box">
+		<div class="box">
 			<div id="header">
 				<div style="float:left;font-size:50px">Weather Forecast</div>
 				<div id="location">Unknown</div>
 			</div>
+		
+			<img src="images/weather/01d.png" id="weather-icon">
 			
-			<div id="notification"></div>
+			<div id="temperature">
+				<div id="temp-value">-</div>
+				<img src="images/weather/celsius.png" id="unit">
+			</div>
 			
-			<div id="container">
-				<img src="images/weather/sun.png" id="weather-icon">
-				
-				<div id="temperature">
-					<div id="temp-value">-</div>
-					<img src="images/weather/celsius.png" id="unit">
-				</div>
-				
-				<div id="more_detail">
-					
-				</div>
-				
-				<p id="date"></p>
+			<div class="column" style="margin-top:20px">
+				<p id="description">Description</p>
+				<p id="humidity">HUMIDITY: Unknown</p>
+				<p id="pressure">PRESSURE: Unknown</p>
+			</div>
+			
+			<div class="column">
+				<p id="cloud">CLOUDINESS: Unknown</p>
+				<p id="wind">WIND SPEED: Unknown</p>
 			</div>
 		</div>
+		<div class="box" id="date"></div>
 	</body>
 	
 	<script>
 		<!-- Display date -->
 		document.getElementById("date").innerHTML = Date();
 	
-		<!-- Select Elements -->
-		const locationElement = document.querySelector("#location");
+		<!-- API KEY -->
+		const key = "8148e263039b943f099b4a09a390c3b6";
 		
 		<!-- Get location -->
+		const locationElement = document.querySelector("#location");
+		
 		if ("geolocation" in navigator){
 			navigator.geolocation.getCurrentPosition(setPosition, showError);
 		}
@@ -56,15 +60,73 @@
 			locationElement.innerHTML = "Browser doesn't support location.";
 		}
 		
+		<!-- Set user's position -->
 		function setPosition(position){
 			let latitude = position.coords.latitude;
 			let longitude = position.coords.longitude;
 			getWeather(latitude,longitude);
 		}
 		
+		<!-- Show error when there is an issue with Geolocation service -->
 		function showError(error){
 			locationElement.style.display="block";
 			locationElement.innerHTML=`${error.message}`;
+		}
+		
+		<!-- Get weather from API provider -->
+		const KELVIN = 273;
+		const weather = {};
+		
+		weather.temperature = {
+			unit: "celsius"
+		}
+		
+		function getWeather(latitude,longitude){
+			let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+			console.log(api);
+			fetch(api)
+				.then(function(response){
+					let data = response.json();
+					return data;
+				})
+				
+				.then(function(data){
+					weather.country = data.sys.country;
+					weather.city = data.name;
+					
+					weather.description = data.weather[0].description;
+					weather.iconId = data.weather[0].icon;
+					
+					weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+					
+					weather.pressure = data.main.pressure;
+					weather.humidity = data.main.humidity;
+					
+					weather.cloud = data.clouds.all;
+					weather.wind = data.wind.speed;
+					
+				})
+				
+				.then(function(){
+					displayWeather();
+				});
+		}
+		
+		<!-- Display weather -->
+		function displayWeather(){
+			document.getElementById("location").innerHTML = `${weather.city}, ${weather.country}`;
+	
+			document.getElementById("weather-icon").src = `images/weather/${weather.iconId}.png`;
+			
+			document.getElementById("temp-value").innerHTML = `${weather.temperature.value}`;
+			
+			document.getElementById("pressure").innerHTML = `PRESSURE: ${weather.pressure} hPa`
+			document.getElementById("humidity").innerHTML = `HUMIDITY: ${weather.humidity}%`;
+			
+			document.getElementById("cloud").innerHTML = `CLOUDINESS: ${weather.cloud}%`;
+			document.getElementById("wind").innerHTML = `WIND SPEED: ${weather.wind} meter/sec`;
+			
+			document.getElementById("description").innerHTML = `${weather.description}`;
 		}
 	</script>
 	
