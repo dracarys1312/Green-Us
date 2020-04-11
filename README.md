@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="150px" src="https://raw.githubusercontent.com/chalalala/Green-Us/master/images/logo.png">
+</p>
+
 # GreenUs
 
 **GreenUs** is a *web-based* gardening app. Our ambition is to give users great experiences with their plants and spread the passion for planting tree to all the people from every ages. We will not only provide **useful information** about plants but also work as a **diary** to keep memories about your little friends.
@@ -46,4 +50,10 @@
 	- ...
 
 ## Credits
-*Still updating...*
+### Team members
+- [chalalala](https://github.com/chalalala) - **Đoàn Tuyết Mai** \<Front-end\>
+- [provodoihi](https://github.com/provodoihi) - **Phùng Kim Sơn** \<Front-end\>
+- [dracarys1312](https://github.com/dracarys1312) - **Nguyễn Phương Thảo** \<Back-end\>
+
+### Icon
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
