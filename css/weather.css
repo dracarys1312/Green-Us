@@ -1,6 +1,10 @@
 body{
 	margin:0;
 	font-family: 'Roboto', sans-serif;
+	background-image: url("../images/weather-background.jpg");
+	background-position:bottom;
+	background-size:cover;
+	background-attachment:fixed;
 }
 
 /* Panel */
@@ -64,6 +68,8 @@ body{
 	width:85%;
 	margin-left:100px;
 	float:left;
+	color:#5a291a;
+	opacity:0.8;
 }
 
 #header{
@@ -118,7 +124,6 @@ body{
 }
 
 #description{
-	color:gray;
 	font-size:36px;
 	text-transform:capitalize;
 	margin-top:0px;
