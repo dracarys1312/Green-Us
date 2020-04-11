@@ -24,7 +24,6 @@
 			<div id="notification"></div>
 			
 			<div id="container">
-				<!-- <img src="images/weather/planet-earth.png" id="weather-icon"> -->
 				<img src="images/weather/sun.png" id="weather-icon">
 				
 				<div id="temperature">
@@ -45,7 +44,28 @@
 		<!-- Display date -->
 		document.getElementById("date").innerHTML = Date();
 	
-
+		<!-- Select Elements -->
+		const locationElement = document.querySelector("#location");
+		
+		<!-- Get location -->
+		if ("geolocation" in navigator){
+			navigator.geolocation.getCurrentPosition(setPosition, showError);
+		}
+		else{
+			locationElement.style.display = "block";
+			locationElement.innerHTML = "Browser doesn't support location.";
+		}
+		
+		function setPosition(position){
+			let latitude = position.coords.latitude;
+			let longitude = position.coords.longitude;
+			getWeather(latitude,longitude);
+		}
+		
+		function showError(error){
+			locationElement.style.display="block";
+			locationElement.innerHTML="<p>${error.message}</p>";
+		}
 	</script>
 	
 </html>
