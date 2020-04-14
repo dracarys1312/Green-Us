@@ -118,6 +118,20 @@
 		
 		</div>
 		
+		<!-- Feedback -->
+		<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal',6)">
+		
+		<div id="feedback_modal" class="modal">
+		
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Give us your feedback!</h2>
+				<textarea id="feedback_content" rows="10" cols="50" maxlength="500"></textarea>
+				<button type="button">Send</button>
+		  	</div>
+		
+		</div>
+		
 		<script>
 			function open_modal(modal_id,span_id){
 				var modal = document.getElementById(modal_id);
