@@ -55,21 +55,21 @@ body{
 
 .text{
 	width:auto;
-	height:30px;
+	height:28px;
 	
 	font-family:Abel;
-	font-size:30px;
-	margin-top:20px;
-	margin-bottom:10px;
+	font-size:28px;
+	margin-top:10px;
+	margin-bottom:6px;
 	margin-left: 18px;
 }
 
 input{
 	width:auto;
-	height:30px;
+	height:28px;
 	
 	font-family:Abel;
-	font-size:30px;
+	font-size:28px;
 	top:10em;
 	margin-top:10px;
 	margin-bottom:10px;
@@ -78,7 +78,7 @@ input{
 
 #confirm{
 	font-family:Abel;
-	font-size:30px;
+	font-size:28px;
 	text-align:left;
 	
 	right:30px;
