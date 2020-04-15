@@ -3,6 +3,7 @@
 	<head>
 		<title>GreenUs</title>
 		<link href="css/main_page.css" rel="stylesheet">
+		<link href="css/feedback.css" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -53,45 +54,7 @@
 		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 		
-		<script>
-			  const scriptURL = 'https://script.google.com/macros/s/AKfycbwbfn2-Z-aZKOMsObksH-9cCG7CwAlMpOUFcn-Dv1VCAQc1arE6/exec'
-			  const form = document.forms['submit-to-google-sheet']
-
-			  form.addEventListener('submit', e => {
-				e.preventDefault()
-				display_response();
-				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				  .then(response => console.log('Success!', response))
-				  .catch(error => console.error('Error!', error.message))
-			  })
-			  
-			var content = document.getElementById("feedback_content")
-			var button = document.getElementById("submit_btn")
-			
-			function display_response(){
-				form.style.display = "none";
-				response.style.display = "block";
-			}
-			
-			function open_modal(modal_id){
-				var modal = document.getElementById(modal_id);
-				var span = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
-
-				// Open the modal when clicked
-				modal.style.display = "block";
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() {
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) {
-					if (event.target == modal) {
-						modal.style.display = "none";
-					}
-				}
-			}
-		</script>
+		<script src="javascript/submit_feedback.js"></script>
+		<script src="javascript/feedback_modal.js"></script>
 	</body>
 </html>

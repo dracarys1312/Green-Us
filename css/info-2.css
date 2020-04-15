@@ -279,6 +279,8 @@ body{
 #feedback_modal .modal-content textarea{
 	resize:none;
 	font-size:18px;
+	width:95%;
+	height:200px;
 }
 
 #feedback_modal .modal-content button{
