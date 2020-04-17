@@ -19,6 +19,18 @@ body{
 	margin:3% auto;
 }
 
+/* Back Arrow */
+#back-arrow{
+	opacity:0.5;
+	width:50px;
+	margin:10px;
+	position:absolute;
+}
+
+#back-arrow:hover{
+	opacity:0.8;
+}
+
 /*Diary */
 #diary{
 	background-color:#ffeaa7;

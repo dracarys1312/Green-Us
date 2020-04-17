@@ -3,6 +3,18 @@ body{
 	font-family:'ABeeZee', sans-serif;
 }
 
+/* Back Arrow */
+#back-arrow{
+	opacity:0.5;
+	width:50px;
+	margin:10px;
+	position:absolute;
+}
+
+#back-arrow:hover{
+	opacity:0.8;
+}
+
 /* Info Box */
 #InfoBox{
 	width:100%;
