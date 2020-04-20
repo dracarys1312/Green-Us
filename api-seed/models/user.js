@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var crypto = require('crypto');
 var logger = require('../helpers/logger');
 var Schema = mongoose.Schema;
-// var CreateUpdatedAt = require('mongoose-timestamp');
+var CreateUpdatedAt = require('mongoose-timestamp');
 
 // Define User Schema
 var User = new Schema({
@@ -28,7 +28,7 @@ var User = new Schema({
     }
 });
 
-// User.plugin(CreateUpdatedAt);
+User.plugin(CreateUpdatedAt);
 
 // Define virtual fullname attribute
 User.virtual('fullname').get(function() {

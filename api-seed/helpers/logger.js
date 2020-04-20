@@ -1,5 +1,6 @@
 'use strict';
 var winston = require('winston');
+var config = require('config');
 winston.emitErrs = true;
 
 var logger = new winston.Logger({
@@ -43,3 +44,10 @@ var logger = new winston.Logger({
     ],
     exitOnError: false
 });
+
+module.exports = logger;
+module.exports.stream = {
+    write: function(message){
+        logger.info(message);
+}
+};

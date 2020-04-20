@@ -10,3 +10,13 @@ npm install
 ```
 node index.js
 ```
+
+### Testing
+```
+npm test
+```
+
+### Swagger Document
+```
+http://localhost:3000
+```
