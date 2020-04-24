@@ -106,7 +106,7 @@ body{
   }
   
   #right_panel{
-	margin-left:10px;
+	margin-left:0;
 	width:96.4%;
   }
 }
