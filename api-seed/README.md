@@ -10,3 +10,8 @@ npm install
 ```
 node index.js
 ```
+
+### Testing
+```
+npm test
+```
