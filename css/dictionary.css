@@ -1,14 +1,9 @@
-@font-face{
-	font-family:HelveBold;
-	src: url('../fonts/HelveBold.ttf');
-}
-
 body{
+	font-family:ABeeZee;
 	margin:0;
 }
 
 h1{
-	font-family:HelveBold;
 	font-size:52px;
 	
 	text-align:center;
@@ -35,6 +30,7 @@ h1{
 /* Search Box */
 #search{
 	font-size:20px;
+	font-family:ABeeZee;
 	width:350px;
 	margin-left:80px;
 }
@@ -42,6 +38,7 @@ h1{
 /* Sorting */
 #sorting{
 	font-size:18px;
+	font-family:ABeeZee;
 	margin-left:400px;
 }
 
@@ -54,8 +51,6 @@ h1{
 	float:left;
 	
 	background-color:brown;
-	/* border:1px solid; */
-	/* border-color:#F1EDED; */
 }
 
 .plant img{
