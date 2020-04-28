@@ -8,30 +8,7 @@ schemes:
 basePath: /api/v1
 produces:
     - application/json
-securityDefinitions:
-  Bearer:
-    type: apiKey
-    name: Authorization
-    in: header
 paths:
-    /users/:
-        get:
-            summary: Get all User API
-            description: |
-                Get all User API
-            responses:
-                200:
-                    description: OK
-                401:
-                    description: Unauthorized
-                400:
-                    description: Bad Request
-                406:
-                    description: Not Acceptable
-                500:
-                    description: Server Internal error
-            tags:
-                - Users
     /users/login:
         post:
             summary: Login API
@@ -118,8 +95,6 @@ paths:
             summary: Get a user
             description: |
                 Get a user by Id
-            security:
-                - Bearer: []
             parameters:
                 - name: id
                   in: path
@@ -146,8 +121,6 @@ paths:
             summary: Get list of user
             description: |
                 Get list of user with page and limit
-            security:
-                - Bearer: []
             parameters:
                 - name: page
                   in: path
@@ -174,150 +147,3 @@ paths:
                     description: Server Internal error
             tags:
                 - Users
-    /users/update/{id}:
-        put:
-            summary: Update a user
-            description: |
-                Update a user with method put
-            security:
-                - Bearer: []
-            parameters:
-                - name: id
-                  in: path
-                  description: User Id
-                  required: true
-                  type: string
-                  format: string
-                - name: data
-                  in: body
-                  description: json body data to update user
-                  required: true
-                  schema:
-                      required:
-                          - username
-                          - email
-                          - password
-                      properties:
-                          username:
-                              type: string
-                              description: User Name
-                          password:
-                              type: string
-                              description: Password of User
-                          email:
-                              type: string
-                              description: Email of User
-            responses:
-                200:
-                    description: OK
-                401:
-                    description: Unauthorized
-                400:
-                    description: Bad Request
-                406:
-                    description: Not Acceptable
-                500:
-                    description: Server Internal error
-            tags:
-              - Users
-
-    /products/create:
-        post:
-            summary: Create a new product
-            description: |
-                Create a new product
-            parameters:
-                - name: data
-                  in: body
-                  description: json body data to create new product
-                  required: true
-                  schema:
-                      required:
-                          - name
-                          - description
-                      properties:
-                          name:
-                              type: string
-                              description: Name
-                          description:
-                              type: string
-                              description: Description of Product
-                          amount:
-                              type: number
-                              description: Amount
-                          in_stock:
-                              type: boolean
-                              description: In stock or not?
-            responses:
-                200:
-                    description: Returns a access token
-                401:
-                    description: Unauthorized
-                400:
-                    description: Bad Request
-                406:
-                    description: Not Acceptable
-                500:
-                    description: Server Internal error
-            tags:
-                - Products
-    /products/list/{page}/{limit}:
-        get:
-            summary: Get list of product
-            description: |
-                Get list of product with page and limit
-            security:
-                - Bearer: []
-            parameters:
-                - name: page
-                  in: path
-                  description: Page Number
-                  required: true
-                  type: string
-                  format: string
-                - name: limit
-                  in: path
-                  description: Limit Number
-                  required: true
-                  type: string
-                  format: string
-            responses:
-                200:
-                    description: OK
-                401:
-                    description: Unauthorized
-                400:
-                    description: Bad Request
-                406:
-                    description: Not Acceptable
-                500:
-                    description: Server Internal error
-            tags:
-                - Products
-    /products/get/{id}:
-        get:
-            summary: Get a product
-            description: |
-                Get a product by Id
-            security:
-                - Bearer: []
-            parameters:
-                - name: id
-                  in: path
-                  description: Product Id
-                  required: true
-                  type: string
-                  format: string
-            responses:
-                200:
-                    description: OK
-                401:
-                    description: Unauthorized
-                400:
-                    description: Bad Request
-                406:
-                    description: Not Acceptable
-                500:
-                    description: Server Internal error
-            tags:
-                - Products

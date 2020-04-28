@@ -30,7 +30,7 @@ var User = new Schema({
 
 User.plugin(CreateUpdatedAt);
 
-// Define virtual fullname attribute
+// Define virtual fullname attribute 
 User.virtual('fullname').get(function() {
     return this.fistname + ' ' + this.lastname;
 });
@@ -113,4 +113,5 @@ User.methods = {
         }
     }
 }
+
 module.exports = mongoose.model('User', User);

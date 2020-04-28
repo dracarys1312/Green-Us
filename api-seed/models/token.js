@@ -8,13 +8,10 @@ var Token = new Schema({
         index: true,
         require: true
     },
-    token: {
-        type: String,
-        index: true,
-        require: true
-    },
+    token: String,
     expired_at: String
 });
 
 Token.plugin(CreateUpdatedAt);
+
 module.exports = mongoose.model('Token', Token);

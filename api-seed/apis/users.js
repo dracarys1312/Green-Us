@@ -1,5 +1,5 @@
 'use strict';
-var express = require('express'),
+var express = require('express'), 
     db = require('../models'),
     logger = require('../helpers/logger'),
     moment = require('moment'),
@@ -7,30 +7,12 @@ var express = require('express'),
     crypto = require('crypto'),
     router = express.Router();
 
-// get listing
-router.get('/', function(req, res, next) {
-  db.User.find(function (err, user) {
-    if (err) return next(err);
-    res.json(user);
-  })
-//   .then(function(user) {
-//         // remove security attributes
-//         user = user.toObject();
-//         if (user) {
-//             delete user.hashed_password;
-//             delete user.salt;
-//         }
-//         res.send(JSON.stringify(user));
-//     });
-});
 // create a new user
-router.post('/create', function(req, res) {
+router.post('/create', function(req, res){
     var user = new db.User(req.body);
-    user.save(function(error, new_user) {
+    user.save(function(error, new_user){
         if (error) {
-            return res.status(406).send(JSON.stringify({
-                error
-            }));
+            return res.status(406).send(JSON.stringify({error}));
         }
         // remove security attributes
         new_user = user.toObject();
@@ -42,20 +24,12 @@ router.post('/create', function(req, res) {
     });
 });
 
-//update a user
-router.put('/update/:id', function(req, res) {
-    db.User.findByIdAndUpdate(req.params.id, req.body, function(err, post) {
-        if (err) return next(err);
-        res.json(post);
-    });
-});
-
 // get a user by id
-router.get('/get/:id', function(req, res) {
+router.get('/get/:id', function(req, res){
     logger.debug('Get User By Id', req.params.id);
     db.User.findOne({
         _id: req.params.id
-    }).then(function(user) {
+    }).then(function(user){
         // remove security attributes
         user = user.toObject();
         if (user) {
@@ -63,43 +37,41 @@ router.get('/get/:id', function(req, res) {
             delete user.salt;
         }
         res.send(JSON.stringify(user));
-    }).catch(function(e) {
+    }).catch(function(e){
         res.status(500).send(JSON.stringify(e));
     });
 });
 
 // get list of users
-router.get('/list/:page/:limit', function(req, res) {
-    var limit = (req.params.limit) ? req.params.limit : 10;
-    var skip = (req.params.page) ? limit * (req.params.page - 1) : 0;
+router.get('/list/:page/:limit', function(req, res){
+    var limit = (req.params.limit)? req.params.limit: 10;
+    var skip = (req.params.page)? limit * (req.params.page - 1): 0;
     db.User
-        .find()
-        .skip(skip)
-        .limit(limit)
-        .sort({
-            '_id': 'desc'
-        })
-        .then(function(users) {
-            res.send(JSON.stringify(users));
-        }).catch(function(e) {
-            res.status(500).send(JSON.stringify(e));
-        });
+    .find()
+    .skip(skip)
+    .limit(limit)
+    .sort({'_id': 'desc'})
+    .then(function(users) {
+        res.send(JSON.stringify(users));
+    }).catch(function(e) {
+        res.status(500).send(JSON.stringify(e));
+    });
 });
 
 // login
-router.post('/login', function(req, res) {
+router.post('/login', function(req, res){
     var username = req.body.username;
     var password = req.body.password;
     db.User.findOne({
         username: username
-    }).then(function(user) {
+    }).then(function(user){
         if (!user.authenticate(password)) {
             throw false;
         }
         db.Token.findOne({
             username: username
-        }).then(function(t) {
-            if (!t) {
+        }).then(function(t){
+            if (!t){
                 crypto.randomBytes(64, function(ex, buf) {
                     var token = buf.toString('base64');
                     var today = moment.utc();
@@ -109,7 +81,7 @@ router.post('/login', function(req, res) {
                         token: token,
                         expired_at: tomorrow.toString()
                     });
-                    token.save(function(error, to) {
+                    token.save(function(error, to){
                         return res.send(JSON.stringify(to));
                     });
                 });
@@ -120,7 +92,7 @@ router.post('/login', function(req, res) {
                 expired_at: t.expired_at
             }));
         });
-    }).catch(function(e) {
+    }).catch(function(e){
         res.status(401).send(JSON.stringify(e));
     });
 });
