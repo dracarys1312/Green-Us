@@ -9,9 +9,6 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 display_response(); 
 })
 
-var content = document.getElementById("feedback_content")
-var button = document.getElementById("submit_btn")
-
 function display_response(){
 form.style.display = "none";
 response.style.display = "block";
