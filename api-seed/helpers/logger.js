@@ -11,10 +11,10 @@ var logger = new winston.Logger({
             json: false,
             colorize: false,
             timestamp: function() {
-                var date = new Date();                          
+                var date = new Date();
 
-                var hour = date.getUTCHours();              
-                hour = (hour < 10 ? '0' : '') + hour;   
+                var hour = date.getUTCHours();
+                hour = (hour < 10 ? '0' : '') + hour;
 
                 var min  = date.getUTCMinutes();
                 min = (min < 10 ? '0' : '') + min;
@@ -49,5 +49,5 @@ module.exports = logger;
 module.exports.stream = {
     write: function(message){
         logger.info(message);
-    }
+}
 };

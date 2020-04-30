@@ -8,8 +8,6 @@ var app = express();
 var yaml = require('js-yaml');
 var bodyParser = require('body-parser');
 var logger = require('./helpers/logger');
-var swaggerUi = require('swagger-ui-express');
-var docs = yaml.safeLoad(fs.readFileSync('./docs/swagger.yml', 'utf8'));
 
 // body parse
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,7 +21,8 @@ app.get('/docs', function(req, res){
     res.send(JSON.stringify(docs));
 });
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(docs));
+// import middlewares
+app.use(require('./middlewares/auth'));
 
 // import routers
 app.use(require('./apis'));
@@ -34,3 +33,5 @@ var server = app.listen(config.get('server.port'), config.get('server.host'), fu
     var port = server.address().port;
     logger.info('Server start at http://%s:%s', host, port);
 });
+
+module.exports = app;

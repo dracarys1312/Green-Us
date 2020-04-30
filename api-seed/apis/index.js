@@ -1,7 +1,8 @@
 'use strict';
-var express = require('express'), 
+var express = require('express'),
     router = express.Router();
 
 router.use('/api/v1/users', require('./users'));
+router.use('/api/v1/products', require('./products'));
 
 module.exports = router;
