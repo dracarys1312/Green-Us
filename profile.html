@@ -5,6 +5,8 @@
 		<link href="css/profile.css" rel="stylesheet">
 		<link href="css/feedback.css" rel="stylesheet">
 		<link href="css/panel.css" rel="stylesheet">
+		<link href="css/loader.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
 	</head>
 	
@@ -17,71 +19,77 @@
 			<div class="icon"><a href="news.html"><img src="images/news.png"></a></div>
 		</div>
 		
-		<div id="left_panel">
-			<img src="images/avatar.jpg" id="avatar">
-			<div id="name">MAI DOAN</div>
-			<div id="email">maidt.bi9162@st.usth.edu.vn</div>
-			<a href="index.html" id="logout">Logout</a>
-		</div>
-		
-		<div id="right_panel">
-			<div class="box">
-				<div class="title">Information</div>
-				
-				<!-- Info -->
-				<div class="feature">
-					<div class="cat">Member Since:</div>
-					<div class="cat">Level:</div>
-					<div class="cat">No. plants:</div>
+		<div id="loader"></div>
+
+		<div id="content">
+			<div id="left_panel">
+				<img src="images/avatar.jpg" id="avatar">
+				<div id="name">MAI DOAN</div>
+				<div id="email">maidt.bi9162@st.usth.edu.vn</div>
+				<a href="index.html" id="logout">Logout</a>
+			</div>
+			
+			<div id="right_panel">
+				<div class="box">
+					<div class="title">Information</div>
+					
+					<!-- Info -->
+					<div class="feature">
+						<div class="cat">Member Since:</div>
+						<div class="cat">Level:</div>
+						<div class="cat">No. plants:</div>
+					</div>
+					
+					<!-- Detail -->
+					<div class="detail">
+						<div class="info memtime">20/03/2020</div>
+						
+						<div class="info level">Beginner</div>
+						
+						<div class="info noplants">1</div>
+					</div>
 				</div>
 				
-				<!-- Detail -->
-				<div class="detail">
-					<div class="info memtime">20/03/2020</div>
+				<div class="box">
+					<div class="title">Connect with friends</div>
 					
-					<div class="info level">Beginner</div>
+					<!-- Info -->
+					<div class="feature">
+						<div class="cat">My ID:</div>
+						<div class="cat">Link:</div>
+						<div class="cat">Friend's ID:</div>
+					</div>
 					
-					<div class="info noplants">1</div>
+					<!-- Detail -->
+					<div class="detail">
+						<div class="info id">ABC123456</div>
+						<div class="info link">http://greenus.io/abc12..</div>
+						<div class="info friends"><input type="text" placeholder="DEF654321" id="friend_id"></div>
+					</div>
 				</div>
 			</div>
 			
-			<div class="box">
-				<div class="title">Connect with friends</div>
-				
-				<!-- Info -->
-				<div class="feature">
-					<div class="cat">My ID:</div>
-					<div class="cat">Link:</div>
-					<div class="cat">Friend's ID:</div>
-				</div>
-				
-				<!-- Detail -->
-				<div class="detail">
-					<div class="info id">ABC123456</div>
-					<div class="info link">http://greenus.io/abc12..</div>
-					<div class="info friends"><input type="text" placeholder="DEF654321" id="friend_id"></div>
-				</div>
+			<!-- Feedback -->
+			<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
+			
+			<div id="feedback_modal" class="modal">
+			
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Give us your feedback!</h2>
+					
+					<form name="submit-to-google-sheet">
+						<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
+						<button id="submit_btn" type="submit">Send</button>
+					</form>
+					<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
+				  </div>
+			
 			</div>
+
 		</div>
 		
-		<!-- Feedback -->
-		<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
-		
-		<div id="feedback_modal" class="modal">
-		
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h2>Give us your feedback!</h2>
-				
-				<form name="submit-to-google-sheet">
-					<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
-					<button id="submit_btn" type="submit">Send</button>
-				</form>
-				<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
-		  	</div>
-		
-		</div>
-		
+		<script src="javascript/loader.js"></script>
 		<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
 		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>

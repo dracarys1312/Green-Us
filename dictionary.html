@@ -5,6 +5,8 @@
 		<link href="css/dictionary.css" rel="stylesheet">
 		<link href="css/panel.css" rel="stylesheet">
 		<link href="css/feedback.css" rel="stylesheet">
+		<link href="css/loader.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 	
 	<body>
@@ -16,9 +18,11 @@
 			<div class="icon"><a href="news.html"><img src="images/news.png"></a></div>
 		</div>
 		
-		<h1>DICTIONARY</h1>
+		<div id="loader"></div>
+		<div id="content">
+			<h1>DICTIONARY</h1>
 	
-		<div id="data">	
+			<div id="data">	
 			<div id="tool_panel">
 				<!-- Search Box -->
 				<input type="text" id="search">
@@ -45,17 +49,17 @@
 			<div class="plant"></div>
 			<div class="plant"></div>
 			<div class="plant"></div>
-		</div>
+			</div>
 		
-		<div id="button">
+			<div id="button">
 			<img src="images/next.png">
 			<img src="images/previous.png">
-		</div>
+			</div>
 		
-		<!-- Feedback -->
-		<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
+			<!-- Feedback -->
+			<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
 		
-		<div id="feedback_modal" class="modal">
+			<div id="feedback_modal" class="modal">
 		
 			<div class="modal-content">
 				<span class="close">&times;</span>
@@ -70,6 +74,9 @@
 		
 		</div>
 		
+		</div>
+		
+		<script src="javascript/loader.js"></script>
 		<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
 		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>

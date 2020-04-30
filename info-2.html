@@ -5,6 +5,8 @@
 		<link href="css/info-2.css" rel="stylesheet">
 		<link href="css/panel.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+		<link href="css/loader.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</header>
 	
 	<body>
@@ -17,127 +19,135 @@
 			<div class="icon"><a href="news.html"><img src="images/news.png"></a></div>
 		</div>
 		
-		<a href="info.html"><img src="images/up-arrow.png" id="up_arrow"></a>
-		
-		<div class="column">
-			<div id="planting">
-				<img src="images/icons/planting.png">
-				<div onclick="open_modal('planting_modal',0)">Planting</div>
+
+		<div id="loader"></div>
+
+		<div id="content">
+			<a href="info.html"><img src="images/up-arrow.png" id="up_arrow"></a>
+			<div class="column">
+				<div id="planting">
+					<img src="images/icons/planting.png">
+					<div onclick="open_modal('planting_modal',0)">Planting</div>
+				</div>
+				
+				<div id="watering">
+					<img src="images/icons/watering.png">
+					<div onclick="open_modal('watering_modal',1)">Watering</div>
+				</div>
+				
+				<div id="sun_req">
+					<img src="images/icons/weather.png">
+					<div onclick="open_modal('sun_req_modal',2)">Sun requirement</div>
+				</div>
 			</div>
 			
-			<div id="watering">
-				<img src="images/icons/watering.png">
-				<div onclick="open_modal('watering_modal',1)">Watering</div>
+			<div class="column">
+				<div id="pruning">
+					<img src="images/icons/pruning.png">
+					<div onclick="open_modal('pruning_modal',3)">Pruning and Training</div>
+				</div>
+				
+				<div id="propagating">
+					<img src="images/icons/propagating.png">
+					<div onclick="open_modal('propagating_modal',4)">Propagating</div>
+				</div>
+	
+				<div id="problem">
+					<img src="images/icons/problems.png">
+					<div onclick="open_modal('problem_modal',5)">Problems</div>
+				</div>
 			</div>
 			
-			<div id="sun_req">
-				<img src="images/icons/weather.png">
-				<div onclick="open_modal('sun_req_modal',2)">Sun requirement</div>
-			</div>
-		</div>
-		
-		<div class="column">
-			<div id="pruning">
-				<img src="images/icons/pruning.png">
-				<div onclick="open_modal('pruning_modal',3)">Pruning and Training</div>
+			<!-- Modal -->
+			<div id="planting_modal" class="modal">
+			
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h1>Planting</h1>
+					<p>Planting instruction</p>
+				  </div>
+			
 			</div>
 			
-			<div id="propagating">
-				<img src="images/icons/propagating.png">
-				<div onclick="open_modal('propagating_modal',4)">Propagating</div>
+			<div id="watering_modal" class="modal">
+			
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h1>Watering</h1>
+					<p>Plants are drought tolerant, but watering in dry periods will encourage further flowering</p>
+				  </div>
+			
+			</div>
+			
+			<div id="sun_req_modal" class="modal">
+			
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h1>Sun Requirements</h1>
+					<p>Sun or Partial Shade</p>
+				  </div>
+			
+			</div>
+			
+			<div id="pruning_modal" class="modal">
+			
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h1>Pruning and Training</h1>
+					<p>Pruning and Training Modal..</p>
+				  </div>
+			
+			</div>
+			
+			<div id="propagating_modal" class="modal">
+			
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h1>Propagating</h1>
+					<p>Propagating Modal..</p>
+				  </div>
+			
+			</div>
+			
+			<div id="problem_modal" class="modal">
+			
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h1>Problems</h1>
+					<p>Problems Modal..</p>
+				  </div>
+			
+			</div>
+			
+			<!-- Feedback -->
+			<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal',6)">
+			
+			<div id="feedback_modal" class="modal">
+			
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Give us your feedback!</h2>
+					
+					<form name="submit-to-google-sheet">
+						<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
+						<button id="submit_btn" type="submit">Send</button>
+					</form>
+					<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
+				  </div>
+			
 			</div>
 
-			<div id="problem">
-				<img src="images/icons/problems.png">
-				<div onclick="open_modal('problem_modal',5)">Problems</div>
-			</div>
 		</div>
+
 		
-		<!-- Modal -->
-		<div id="planting_modal" class="modal">
 		
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h1>Planting</h1>
-				<p>Planting instruction</p>
-		  	</div>
-		
-		</div>
-		
-		<div id="watering_modal" class="modal">
-		
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h1>Watering</h1>
-				<p>Plants are drought tolerant, but watering in dry periods will encourage further flowering</p>
-		  	</div>
-		
-		</div>
-		
-		<div id="sun_req_modal" class="modal">
-		
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h1>Sun Requirements</h1>
-				<p>Sun or Partial Shade</p>
-		  	</div>
-		
-		</div>
-		
-		<div id="pruning_modal" class="modal">
-		
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h1>Pruning and Training</h1>
-				<p>Pruning and Training Modal..</p>
-		  	</div>
-		
-		</div>
-		
-		<div id="propagating_modal" class="modal">
-		
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h1>Propagating</h1>
-				<p>Propagating Modal..</p>
-		  	</div>
-		
-		</div>
-		
-		<div id="problem_modal" class="modal">
-		
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h1>Problems</h1>
-				<p>Problems Modal..</p>
-		  	</div>
-		
-		</div>
-		
-		<!-- Feedback -->
-		<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal',6)">
-		
-		<div id="feedback_modal" class="modal">
-		
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h2>Give us your feedback!</h2>
-				
-				<form name="submit-to-google-sheet">
-					<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
-					<button id="submit_btn" type="submit">Send</button>
-				</form>
-				<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
-		  	</div>
-		
-		</div>
-		
+		<script src="javascript/loader.js"></script>
 		<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
 		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>

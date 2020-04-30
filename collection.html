@@ -5,6 +5,8 @@
 		<link href="css/collection.css" rel="stylesheet">
 		<link href="css/feedback.css" rel="stylesheet">
 		<link href="css/panel.css" rel="stylesheet">
+		<link href="css/loader.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 	
 	<body>
@@ -16,42 +18,47 @@
 			<div class="icon"><a href="news.html"><img src="images/news.png"></a></div>
 		</div>
 		
-		<div id="collection">
-			<div class="plant"><a href="info_plant.html"><img src="images/sunflower.jpg"></a></div>
-			<div class="plant"><img src="images/iris.jpg"></div>
-			<div class="plant"></div>
-			<div class="plant"></div>
-			<div class="plant"></div>
-			<div class="plant"></div>
-			<div class="plant"></div>
-			<div class="plant"></div>
-			<div class="plant"></div>
-			<div class="plant"></div>
+		<div id="loader"></div>
+
+		<div id="content">
+			<div id="collection">
+				<div class="plant"><a href="info_plant.html"><img src="images/sunflower.jpg"></a></div>
+				<div class="plant"><img src="images/iris.jpg"></div>
+				<div class="plant"></div>
+				<div class="plant"></div>
+				<div class="plant"></div>
+				<div class="plant"></div>
+				<div class="plant"></div>
+				<div class="plant"></div>
+				<div class="plant"></div>
+				<div class="plant"></div>
+			</div>
+			
+			<div id="button">
+				<img src="images/next.png">
+				<img src="images/previous.png">
+			</div>
+			
+			<!-- Feedback -->
+			<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
+			
+			<div id="feedback_modal" class="modal">
+			
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Give us your feedback!</h2>
+					
+					<form name="submit-to-google-sheet">
+						<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
+						<button id="submit_btn" type="submit">Send</button>
+					</form>
+					<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
+				  </div>
+			
+			</div>
 		</div>
 		
-		<div id="button">
-			<img src="images/next.png">
-			<img src="images/previous.png">
-		</div>
-		
-		<!-- Feedback -->
-		<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
-		
-		<div id="feedback_modal" class="modal">
-		
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h2>Give us your feedback!</h2>
-				
-				<form name="submit-to-google-sheet">
-					<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
-					<button id="submit_btn" type="submit">Send</button>
-				</form>
-				<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
-		  	</div>
-		
-		</div>
-		
+		<script src="javascript/loader.js"></script>
 		<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
 		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
