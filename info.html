@@ -6,6 +6,8 @@
 		<link href="css/feedback.css" rel="stylesheet">
 		<link href="css/panel.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+		<link href="css/loader.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 	
 	<body>
@@ -18,7 +20,10 @@
 			<div class="icon"><a href="news.html"><img src="images/news.png"></a></div>
 		</div>
 		
-		<!-- Image -->
+		<div id="loader"></div>
+
+		<div id="content">
+			<!-- Image -->
 		<div id="photo"><img src="images/Alstroemeria.jpg"></div>
 		
 		<!-- Info Box -->
@@ -72,7 +77,9 @@
 		  	</div>
 		
 		</div>
+		</div>
 		
+		<script src="javascript/loader.js"></script>
 		<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
 		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>

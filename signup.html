@@ -3,40 +3,52 @@
 	<head>
 		<title>Sign Up</title>
 		<link href="css/signup.css" rel="stylesheet">
+		<link href="css/loader.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
 	</head>
 	
 	<body>
-		<a href="index.html"><img src="images/logo.png" id="logo" style="z-index:1"></a>
-
-		<img src="images/Background.png" class="background"></div>
-
-		<img src="images/Welcome02.png" id="welcome">
 		
-		<img src="images/CreateAccount.png" id="signup">
-		
-		<div id="register">
-			<div class="text">Account</div>
-			<input type="text" id="account">
+		<div id="loader"></div>
 
-			<div class="text">Email</div>
-			<input type="text" id="email">
+		<div id="content">
+			<a href="index.html"><img src="images/logo.png" id="logo" style="z-index:1"></a>
+			<img src="images/Background.png" class="background">
+
+			<img src="images/Welcome02.png" id="welcome">
+		
+			<img src="images/CreateAccount.png" id="signup">
+
+		
 			
-			<div class="text">Password</div>
-			<input type="password" id="pass">
-			
-			<div class="text">Confirm Password</div>
-			<input type="password" id="passcfm">
-			
-			<div id="terms">
-				<div>By signing up, I agree with</div>
-				<a href="#">terms of service</a>
+			<div id="register">
+				<div class="text">Account</div>
+				<input type="text" id="account">
+	
+				<div class="text">Email</div>
+				<input type="text" id="email">
+				
+				<div class="text">Password</div>
+				<input type="password" id="pass">
+				
+				<div class="text">Confirm Password</div>
+				<input type="password" id="passcfm">
+				
+				<div id="terms">
+					<div>By signing up, I agree with</div>
+					<a href="#">terms of service</a>
+				</div>
+				
+				<div id="SignUpBtn">
+					<a href="signup.html" id="txtSignUp">Sign Up</a>
+					<img src="images/SignUp.png">
+				</div>
 			</div>
-			
-			<div id="SignUpBtn">
-				<a href="signup.html" id="txtSignUp">Sign Up</a>
-				<img src="images/SignUp.png">
-			</div>
+	
 		</div>
+		
+		<script src="javascript/loader.js"></script>
 	</body>
 	
 </html>

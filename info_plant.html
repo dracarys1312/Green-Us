@@ -5,10 +5,16 @@
 		<link href="css/info_plant.css" rel="stylesheet">
 		<link href="css/feedback.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+		<link href="css/loader.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 	
 	<body>
-		<!-- Back Arrow -->
+
+		<div id="loader"></div>
+		
+		<div id="content">
+			<!-- Back Arrow -->
 		<a href="collection.html"><img src="images/left-arrow.png" id="back-arrow"></a>
 		
 		<!-- Info Box -->
@@ -80,7 +86,9 @@
 		  	</div>
 		
 		</div>
+		</div>
 		
+		<script src="javascript/loader.js"></script>
 		<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
 		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>

@@ -5,6 +5,8 @@
 		<link href="css/weather.css" rel="stylesheet">
 		<link href="css/feedback.css" rel="stylesheet">
 		<link href="css/panel.css" rel="stylesheet">
+		<link href="css/loader.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	</head>
 	
@@ -18,57 +20,64 @@
 			<div class="icon"><a href="news.html"><img src="images/news.png"></a></div>
 		</div>
 		
-		<div class="box">
-			<div id="header">
-				<div style="float:left;font-size:50px">Weather Forecast</div>
-				<div id="location">Unknown</div>
-			</div>
-		
-			<img src="images/weather/01d.png" id="weather-icon">
+		<div id="loader"></div>
+
+		<div id="content">
+			<div class="box">
+				<div id="header">
+					<div style="float:left;font-size:50px">Weather Forecast</div>
+					<div id="location">Unknown</div>
+				</div>
 			
-			<div id="temperature">
-				<div id="temp-value">-</div>
-				<img src="images/weather/celsius.png" id="unit">
-			</div>
-			
-			<div class="column" style="margin-top:20px">
-				<p id="description">Description</p>
-				<p id="humidity">HUMIDITY: Unknown</p>
-				<p id="pressure">PRESSURE: Unknown</p>
-			</div>
-			
-			<div class="column">
-				<p id="cloud">CLOUDINESS: Unknown</p>
-				<p id="wind">WIND SPEED: Unknown</p>
-			</div>
-		</div>
-		
-		<div class="box" id="date"></div>
-		
-		<div class="box">
-			<div style="font-size:50px; margin-top:30px">Suggestion</div>
-			<p>Coming soon...</p>
-		</div>
-		
-		<!-- Feedback -->
-		<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
-		
-		<div id="feedback_modal" class="modal">
-		
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h2>Give us your feedback!</h2>
+				<img src="images/weather/01d.png" id="weather-icon">
 				
-				<form name="submit-to-google-sheet">
-					<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
-					<button id="submit_btn" type="submit">Send</button>
-				</form>
-				<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
-		  	</div>
-		
-		</div>
-		
+				<div id="temperature">
+					<div id="temp-value">-</div>
+					<img src="images/weather/celsius.png" id="unit">
+				</div>
+				
+				<div class="column" style="margin-top:20px">
+					<p id="description">Description</p>
+					<p id="humidity">HUMIDITY: Unknown</p>
+					<p id="pressure">PRESSURE: Unknown</p>
+				</div>
+				
+				<div class="column">
+					<p id="cloud">CLOUDINESS: Unknown</p>
+					<p id="wind">WIND SPEED: Unknown</p>
+				</div>
+			</div>
+			
+			<div class="box" id="date"></div>
+			
+			<div class="box">
+				<div style="font-size:50px; margin-top:30px">Suggestion</div>
+				<p>Coming soon...</p>
+			</div>
+			
+			<!-- Feedback -->
+			<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
+			
+			<div id="feedback_modal" class="modal">
+			
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Give us your feedback!</h2>
+					
+					<form name="submit-to-google-sheet">
+						<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
+						<button id="submit_btn" type="submit">Send</button>
+					</form>
+					<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
+				  </div>
+			
+			</div>
+		</div>	
+		<script src="javascript/loader.js"></script>
+
 	</body>
+	
+		
 	
 	<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
 	<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
