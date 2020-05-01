@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Plant = require('../models/Plant.js'),
+var Plant = require('../models/plant.js'),
     db = require('../models'),
     logger = require('../helpers/logger');
 

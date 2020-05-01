@@ -30,8 +30,6 @@ var Plant = new Schema({
 
 Plant.plugin(CreateUpdatedAt);
 
-module.exports = mongoose.model('Plant', Plant);
-
 // Do some thing before saving data
 Plant.pre('save', function(next) {
     logger.debug('Starting saving plant data');
@@ -43,3 +41,5 @@ Plant.post('save', function(obj, next) {
     logger.debug('Finished %s', obj._id.toString());
     next();
 });
+
+module.exports = mongoose.model('Plant', Plant);

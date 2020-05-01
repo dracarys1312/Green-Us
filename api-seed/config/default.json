@@ -14,6 +14,7 @@
         "/api/v1/users/login",
         "/api/v1/users/create",
         "/api/v1/products/create",
+        "/api/v1/plants/create",
         "/api/v1/users/"
     ],
     "token_expire": 86400,

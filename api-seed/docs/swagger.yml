@@ -220,34 +220,62 @@ paths:
                     description: Server Internal error
             tags:
               - Users
-
-    /products/create:
+    /plants/create:
         post:
-            summary: Create a new product
+            summary: Create a new plant
             description: |
-                Create a new product
+                Create a new plant
             parameters:
                 - name: data
                   in: body
-                  description: json body data to create new product
+                  description: json body data to create new plant
                   required: true
                   schema:
                       required:
-                          - name
-                          - description
+                          - commonname
+                          - type
                       properties:
-                          name:
-                              type: string
-                              description: Name
-                          description:
-                              type: string
-                              description: Description of Product
-                          amount:
-                              type: number
-                              description: Amount
-                          in_stock:
-                              type: boolean
-                              description: In stock or not?
+                          commonname:
+                              type: String
+                              require: true
+                              description: Common name
+                          othername:
+                              type: String
+                              description: Other names
+                          type:
+                              type: String
+                              require: true
+                              description: Type
+                          difficulty:
+                              type: String
+                              description: Difficulty
+                          time:
+                              type: String
+                              description: Planting Time
+                          instruction:
+                              type: String
+                              description: Planting (instruction)
+                          watering:
+                              type: String
+                              description: Watering
+                          sunrequirements:
+                              type: String
+                              description: Sun Requirements
+                          prunetrain:
+                              type: String
+                              description: Pruning and Training
+                          propagating:
+                              type: String
+                              description: Propagating
+                          disease:
+                              type: String
+                              description: Problems (Pest/Disease)
+                          meaning:
+                              type: String
+                              description: Meaning/Symbols
+                          images:
+                              type: String
+                              description: Images
             responses:
                 200:
                     description: Returns a access token
@@ -260,12 +288,12 @@ paths:
                 500:
                     description: Server Internal error
             tags:
-                - Products
-    /products/list/{page}/{limit}:
+                - Plants
+    /plants/list/{page}/{limit}:
         get:
-            summary: Get list of product
+            summary: Get list of plant
             description: |
-                Get list of product with page and limit
+                Get list of plant with page and limit
             security:
                 - Bearer: []
             parameters:
@@ -293,18 +321,18 @@ paths:
                 500:
                     description: Server Internal error
             tags:
-                - Products
-    /products/get/{id}:
+                - Plants
+    /plants/get/{id}:
         get:
-            summary: Get a product
+            summary: Get a plant
             description: |
-                Get a product by Id
+                Get a plant by Id
             security:
                 - Bearer: []
             parameters:
                 - name: id
                   in: path
-                  description: Product Id
+                  description: Plant Id
                   required: true
                   type: string
                   format: string
@@ -320,4 +348,4 @@ paths:
                 500:
                     description: Server Internal error
             tags:
-                - Products
+                - Plants
