@@ -4,7 +4,7 @@ var logger = require('../helpers/logger');
 var Schema = mongoose.Schema;
 var CreateUpdatedAt = require('mongoose-timestamp');
 
-// Define User Schema
+// Define Product Schema
 var Product = new Schema({
     name: {
         type: String,
