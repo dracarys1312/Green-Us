@@ -15,75 +15,68 @@
 		
 		<div id="content">
 			<!-- Back Arrow -->
-		<a href="collection.html"><img src="images/left-arrow.png" id="back-arrow"></a>
+			<a href="collection.html"><img src="images/left-arrow.png" id="back-arrow"></a>
 		
-		<!-- Info Box -->
-		<div id="InfoBox">
-			<!-- Image -->
-			<div id="photo"><img src="images/sunflower.jpg"></div>
-		
-			<!-- Name -->
-			<div id="name">SUNNY</div>
-			
-			<!-- Info -->
-			<div id="feature">
-				<div class="cat">D.O.B:</div>
-				<div class="cat">Age:</div>
-				<div class="cat">Type:</div>
-				<div class="cat">Status:</div>
+			<!-- Info Box -->
+			<div id="InfoBox">
+				<!-- Image -->
+				<div id="photo"><img src="images/sunflower.jpg"></div>
+				
+				<!-- Info -->
+				<div id="feature">
+					<!-- Name -->
+					<div class="info name">SUNNY</div>
+					
+					<!-- D.O.B -->
+					<div class="info dob">D.O.B: 20/03/2020</div>
+					
+					<!-- Age -->
+					<div class="info age">Age: 40 days</div>
+					
+					<!-- Type -->
+					<div class="info type">Type: Unknown</div>
+					
+					<!-- Status -->
+					<div class="cat">Status:
+						<input type="text" id="stt" placeholder="status" readonly>
+						<img src="images/edit.png" width="30px">
+					</div>
+				</div>
+				
+			<!-- Part of diary -->
+			<div id="diary">
+					<a href="diary.html">See more</a>
+					
+					<div id="writing">
+						<p>So litte</p>
+						<hr width="96%" align="center">
+						<p>I wanna sleep</p>
+						<hr width="96%" align="center">
+						<p>Wait, this is not for plant, not me</p>
+						<hr width="96%" align="center">
+						<p>Whatever</p>
+						<hr width="96%" align="center">
+						<p>Whatever</p>
+						<hr width="96%" align="center">
+						<p>Whatever</p>
+					</div>
 			</div>
 			
-			<!-- Detail -->
-			<div id="detail">
-				<!-- Season -->
-				<div class="info dob">20/03/2020</div>
-				
-				<!-- Temperature -->
-				<div class="info age">40 days</div>
-				
-				<!-- Properties -->
-				<div class="info type">Unknown</div>
-				
-				<!-- Meaning -->
-				<div class="info">
-					<input type="text" id="stt" readonly>
-					<img src="images/edit.png" width="30px">
+			<!-- Feedback -->
+			<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
+			
+			<div id="feedback_modal" class="modal">
+			
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Give us your feedback!</h2>
+					
+					<form name="submit-to-google-sheet">
+						<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
+						<button id="submit_btn" type="submit">Send</button>
+					</form>
+					<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
 				</div>
-			</div>
-		</div>
-		
-		<!-- Part of diary -->
-		<div id="diary">
-				<a href="diary.html">See more</a>
-				
-				<div id="writing">
-					<p>So litte</p>
-					<hr width="96%" align="center">
-					<p>I wanna sleep</p>
-					<hr width="96%" align="center">
-					<p>Wait, this is not for plant, not me</p>
-					<hr width="96%" align="center">
-					<p>Whatever</p>
-					<hr width="96%" align="center">
-					<p>Whatever</p>
-				</div>
-		</div>
-		
-		<!-- Feedback -->
-		<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
-		
-		<div id="feedback_modal" class="modal">
-		
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h2>Give us your feedback!</h2>
-				
-				<form name="submit-to-google-sheet">
-					<textarea id="feedback_content" name="feedback" maxlength="500"></textarea>
-					<button id="submit_btn" type="submit">Send</button>
-				</form>
-				<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
-		  	</div>
 		
 		</div>
 		</div>
