@@ -1,0 +1,8 @@
+{
+    "services": {
+        "users": {
+            "create": "/api/v1/users/create",
+            "login": "/api/v1/users/login"
+        }
+    }
+}
