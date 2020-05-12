@@ -57,7 +57,7 @@ body{
 
 #terms div{
 	font-family:Arial, Helvetica, sans-serif;
-	font-size:24px;
+	font-size:22px;
 }
 
 #terms a{
@@ -66,22 +66,21 @@ body{
 }
 
 #SignUpBtn{
-	width:130px;
+	width:110px;
 	height:50px;
 	
-	position:absolute;
+	position:relative;
 	margin-left:28%;
 }
 
 #SignUpBtn a{
 	font-family:Arial, Helvetica, sans-serif;
-	font-size:26px;
+	font-size:22px;
 	color:white;
 	text-decoration:none;
 	
 	position:absolute;
-	margin-top:10px;
-	margin-left:32px;
-	
+	margin-top:11px;
+	margin-left:29px;
 	z-index:1;
 }
