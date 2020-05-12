@@ -67,6 +67,11 @@ input{
 	position:absolute;
 	margin-top:20px;
 	left:70px;
+	opacity:0.8;
+}
+
+#ConfirmBtn:hover{
+	opacity:1;
 }
 
 #ConfirmBtn a{
