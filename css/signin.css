@@ -76,7 +76,7 @@ body{
 
 /* Right */
 #login{
-	width:290px;
+	width:220px;
 	height:auto;
 
 	position:absolute;
@@ -101,7 +101,7 @@ body{
 	
 	position:absolute;
 	margin-top:20px;
-	margin-left:95px;
+	margin-left:18%;
 }
 
 #SigninBtn a{
