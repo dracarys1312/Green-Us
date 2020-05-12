@@ -4,8 +4,9 @@
 		<title>Sign Up</title>
 		<link href="css/signup.css" rel="stylesheet">
 		<link href="css/loader.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 	
 	<body>
@@ -19,21 +20,39 @@
 			<img src="images/Welcome02.png" id="welcome">
 		
 			<img src="images/CreateAccount.png" id="signup">
-
-		
 			
 			<div id="register">
-				<div class="text">Account</div>
-				<input type="text" id="account">
-	
-				<div class="text">Email</div>
-				<input type="email" id="email">
-				
-				<div class="text">Password</div>
-				<input type="password" id="pass">
-				
-				<div class="text">Confirm Password</div>
-				<input type="password" id="passcfm">
+				<div class="container">
+					<form>
+						<div class="row">
+							<div class="form-group col-xs-3">
+								<label for="usr">Username:</label>
+								<input type="text" class="form-control" id="usr">
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="form-group col-xs-3">
+								<label for="usr">Email:</label>
+								<input type="email" class="form-control" id="email">
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="form-group col-xs-3">
+								<label for="pwd">Password:</label>
+								<input type="password" class="form-control" id="pwd">
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="form-group col-xs-3">
+								<label for="cfpwd">Password:</label>
+								<input type="password" class="form-control" id="cfpwd">
+							</div>
+						</div>
+					</form>
+				</div>
 				
 				<div id="terms">
 					<div>By signing up, I agree with</div>
