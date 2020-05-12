@@ -7,15 +7,26 @@ body{
 	width:70px;
 	position:absolute;
 	top:20px;
-	left:650px;
+	left:50vw;
+}
+
+#content{
+	background-image:url('../images/background_info.jpg');
+	background-size:cover;
+	background-position:bottom;
+	background-attachment:fixed;
+	width:100vw;
+	height:100vh;
+	font-size:2vw;
 }
 
 .column{
 	float:left;
-	width:500px;
+	width:25vw;
 	
-	margin-left:130px;
+	margin-left:16vw;
 	margin-top:150px;
+	transform: rotate(-0.5deg);
 }
 
 /* Planting */
@@ -34,7 +45,7 @@ body{
 }
 
 #planting div{
-	font-size:36px;
+	/* font-size:36px; */
 	float:left;
 	margin-top:10px;
 	margin-left:30px;
@@ -57,7 +68,7 @@ body{
 }
 
 #watering div{
-	font-size:36px;
+	/* font-size:36px; */
 	float:left;
 	margin-top:10px;
 	margin-left:30px;
@@ -80,7 +91,7 @@ body{
 }
 
 #sun_req div{
-	font-size:36px;
+	/* font-size:36px; */
 	float:left;
 	margin-top:10px;
 	margin-left:30px;
@@ -102,7 +113,7 @@ body{
 }
 
 #pruning div{
-	font-size:36px;
+	/* font-size:36px; */
 	float:left;
 	margin-top:10px;
 	cursor:pointer;
@@ -124,7 +135,7 @@ body{
 }
 
 #propagating div{
-	font-size:36px;
+	/* font-size:36px; */
 	float:left;
 	margin-top:10px;
 	cursor:pointer;
@@ -146,7 +157,7 @@ body{
 }
 
 #problem div{
-	font-size:36px;
+	/* font-size:36px; */
 	float:left;
 	margin-top:10px;
 	cursor:pointer;
