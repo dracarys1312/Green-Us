@@ -4,7 +4,9 @@
 		<title>Reset Password</title>
 		<link href="css/resetpass.css" rel="stylesheet">
 		<link href="css/loader.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 	
 	<body>
@@ -20,14 +22,26 @@
 			<img src="images/ResetPass.png" id="reset">
 			
 			<div id="ResetZone">
-				<div class="text">Account</div>
-				<input type="text" id="acc">
+				<div class="row">
+					<div class="form-group">
+						<label for="usr">Username:</label>
+						<input type="text" class="form-control" id="usr">
+					</div>
+				</div>
 				
-				<div class="text">Password</div>
-				<input type="password" id="pass">
+				<div class="row">
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input type="password" class="form-control" id="pwd">
+					</div>
+				</div>
 
-				<div class="text">Confirm Password</div>
-				<input type="password" id="passcfm">
+				<div class="row">
+					<div class="form-group">
+						<label for="cfpwd">Password:</label>
+						<input type="password" class="form-control" id="cfpwd">
+					</div>
+				</div>
 
 				<div id="ConfirmBtn">
 					<a href="resetpass.html">Confirm</a>
