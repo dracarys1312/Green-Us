@@ -49,18 +49,8 @@ body{
 	width:280px;
 	height:350px;
 	position:absolute;
-	top:120px;
-	right:250px;
-}
-
-.text{
-	width:auto;
-	height:30px;
-	
-	font-family:Abel;
-	font-size:30px;
-	margin-top:10px;
-	margin-bottom:5px;
+	top:30vh;
+	left:60vw;
 }
 
 input{
@@ -80,7 +70,7 @@ input{
 	height:50px;
 	
 	position:absolute;
-	bottom:8px;
+	margin-top:20px;
 	left:70px;
 }
 
@@ -91,7 +81,7 @@ input{
 	text-decoration:none;
 	
 	position:absolute;
-	margin-top:13px;
+	margin-top:10px;
 	margin-left:32px;
 	
 	z-index:1;
