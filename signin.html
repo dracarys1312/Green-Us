@@ -4,7 +4,9 @@
 		<title>Sign In</title>
 		<link href="css/signin.css" rel="stylesheet">
 		<link href="css/loader.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 	
 	<body>
@@ -27,22 +29,32 @@
 		</div>
 		
 		<div id="login">
-			<div class="text">Account</div>
-			<input type="text" id="account">
+			<div class="container">
+				<form>
+					<div class="row">
+						<div class="form-group col-xs-3">
+							<label for="usr">Username:</label>
+							<input type="text" class="form-control" id="usr">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="form-group col-xs-3">
+							<label for="pwd">Password:</label>
+							<input type="password" class="form-control" id="pwd">
+						</div>
+					</div>
+				</form>
+			</div>
 			
-			<div class="text">Password</div>
-            <input type="password" id="pass">
-
-            <div id="forgot"><a href="resetpass.html">Forgot your password?</a></div>
-            
-            <div id="SignInBtn">
+			<div id="forgot"><a href="resetpass.html">Forgot your password?</a></div>
+				
+			<div id="SignInBtn">
 				<a href="main_page.html" id="txtSignIn">Sign In</a>
-                <img src="images/SignUp.png">
-            </div>
+				<img src="images/SignUp.png">
+			</div>
 		</div>
-
 		</div>
-		
 	
 		<script src="javascript/loader.js"></script>
 	</body>

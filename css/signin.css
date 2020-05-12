@@ -33,7 +33,7 @@ body{
 /* Left */
 #welcome{
 	position:absolute;
-	left:14%;
+	left:14vw;
 	top:32%;
 }
 
@@ -42,7 +42,7 @@ body{
 	height:130px;
 	position:absolute;
 	bottom:120px;
-	left:230px;
+	left:18vw;
 }
 
 #signup{
@@ -76,43 +76,19 @@ body{
 
 /* Right */
 #login{
-	width:320px;
-	height:480px;
+	width:290px;
+	height:auto;
+
 	position:absolute;
-	top:120px;
-	right:200px;
-}
-
-.text{
-	width:auto;
-	height:30px;
-	
-	font-family:Abel;
-	font-size:30px;
-	margin-top:55px;
-	margin-bottom:10px;
-	margin-left: 18px;
-}
-
-input{
-	width:auto;
-	height:30px;
-	
-	font-family:Abel;
-	font-size:30px;
-	top:10em;
-	margin-top:10px;
-	margin-bottom:10px;
-	margin-left: 18px;
+	top:30vh;
+	left:60vw;
 }
 
 #forgot{
 	font-family:Abel;
-	font-size:30px;
+	font-size:25px;
 	color: white;
 	text-align:center;
-	
-	margin-top:10px;
 }
 
 #forgot a{
