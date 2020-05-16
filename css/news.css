@@ -46,16 +46,16 @@ h2{
 	margin-bottom:20px;
 }
 
-#top_news .photo{
+.photo{
 	width:98%;
 	height:250px;
 }
 
-#top_news .title{
+.title{
 	font-size:24px;
 }
 
-#top_news .description{
+.description{
 	font-size:16px;
 }
 
