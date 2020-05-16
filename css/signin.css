@@ -54,6 +54,11 @@ body{
 	position:absolute;
 	top:60px;
 	left:60px;
+	opacity:0.8;
+}
+
+#SignUpBtn:hover{
+	opacity:1;
 }
 
 #SignupBtn a{
@@ -97,6 +102,11 @@ body{
 	position:absolute;
 	margin-top:20px;
 	margin-left:19%;
+	opacity:0.8;
+}
+
+#SignInBtn:hover{
+	opacity:1;
 }
 
 #SigninBtn a{

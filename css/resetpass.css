@@ -67,16 +67,21 @@ input{
 	position:absolute;
 	margin-top:20px;
 	left:70px;
+	opacity:0.8;
+}
+
+#ConfirmBtn:hover{
+	opacity:1;
 }
 
 #ConfirmBtn a{
 	font-family:Arial, Helvetica, sans-serif;
-	font-size:26px;
+	font-size:22px;
 	color:white;
 	text-decoration:none;
 	
 	position:absolute;
-	margin-top:10px;
+	margin-top:12px;
 	margin-left:32px;
 	
 	z-index:1;
