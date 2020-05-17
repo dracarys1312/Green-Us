@@ -24,7 +24,7 @@ $(document).ready(function () {
               <img src="${latestNews[i].urlToImage}" class="responsive-img" alt="${latestNews[i].title}">
             </div>
             <div class="card-content">
-            <h6 class="truncate"><a href="${latestNews[i].url}" title="${latestNews[i].title}">${latestNews[i].title}</a></h6>              
+              <h6 class="truncate"><a href="${latestNews[i].url}" title="${latestNews[i].title}">${latestNews[i].title}</a></h6>              
             </div>
 
             <div class="card-reveal">

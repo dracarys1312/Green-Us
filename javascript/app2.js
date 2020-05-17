@@ -20,7 +20,8 @@ $(document).ready(function () {
         let latestNews = newsdata.articles;
         for (var i in latestNews) {
           output +=`
-          <div class ="col l3 m6 s12">
+          
+          
               <div class="card-image">
                 <img src="${latestNews[i].urlToImage}" class="responsive-img" alt="${latestNews[i].title}">
               </div>
@@ -28,7 +29,7 @@ $(document).ready(function () {
                 <h6 class="truncate"><a href="${latestNews[i].url}" title="${latestNews[i].title}">${latestNews[i].title}</a></h6>
               </div>
           </div>
-            
+          
              `;
         }
   
