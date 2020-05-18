@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let url = "https://newsapi.org/v2/everything?q=gardening&sortBy=popularity&pageSize=5&page=1&apiKey=4e9ac101e6a4442bbd34ef17afbd597c";
+    let url = "https://newsapi.org/v2/everything?q=gardening&sortBy=popularity&pageSize=9&page=1&apiKey=4e9ac101e6a4442bbd34ef17afbd597c";
   
     $.ajax({
       url: url,
@@ -19,6 +19,7 @@ $(document).ready(function () {
         let output = "";
         let latestNews = newsdata.articles;
         for (var i in latestNews) {
+		  if (i>3){
           output +=`
               <div class="card-content">
                 <h6 class="truncate"><a href="${latestNews[i].url}" title="${latestNews[i].title}">${latestNews[i].title}</a></h6>
@@ -26,6 +27,7 @@ $(document).ready(function () {
           </div>
             
              `;
+		  }
         }
   
         if (output !== "") {

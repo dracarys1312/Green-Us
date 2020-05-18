@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let url = "https://newsapi.org/v2/everything?q=gardening&sortBy=popularity&pageSize=3&page=1&apiKey=4e9ac101e6a4442bbd34ef17afbd597c";
+    let url = "https://newsapi.org/v2/everything?q=gardening&sortBy=popularity&pageSize=4&page=1&apiKey=4e9ac101e6a4442bbd34ef17afbd597c";
   
     $.ajax({
       url: url,
@@ -19,7 +19,8 @@ $(document).ready(function () {
         let output = "";
         let latestNews = newsdata.articles;
         for (var i in latestNews) {
-          output +=`
+          if (i>0){
+		  output +=`
           
           
               <div class="card-image">
@@ -31,6 +32,7 @@ $(document).ready(function () {
           </div>
           
              `;
+		  }
         }
   
         if (output !== "") {
