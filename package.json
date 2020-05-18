@@ -1,0 +1,32 @@
+{
+  "name": "green-us",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chalalala/Green-Us.git"
+  },
+  "keywords": [
+    "nodejs",
+    "html",
+    "css"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chalalala/Green-Us/issues"
+  },
+  "homepage": "https://github.com/chalalala/Green-Us#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "connect-mongo": "^3.0.0",
+    "ejs": "^3.0.1",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.6.10"
+  }
+}
