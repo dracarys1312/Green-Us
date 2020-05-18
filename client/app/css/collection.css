@@ -1,0 +1,62 @@
+body{
+	margin:0;
+}
+
+/* Main Part */
+#collection{
+	margin-left:20px;
+	margin-top:10px;
+	margin-bottom:20px;
+	
+	width:93.5%;
+	height:auto;
+	float:left;
+	z-index:-1;
+}
+
+@keyframes select{
+	from{
+		margin-top:0px;
+		margin-left:0px;
+	}
+	to{
+		margin-top:10px;
+		margin-left:10px;
+	}
+}
+
+.plant{
+	width:190px;
+	height:250px;
+	margin-top:30px;
+	margin-left:55px;
+	float:left;
+	
+	background-color:brown;
+	border:1px solid;
+	border-color:#F1EDED;
+}
+
+.plant img:hover{
+	animation:select 0.5s;
+	animation-fill-mode:both;
+}
+
+.plant img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+/*Button*/
+#button{
+	width:90%;
+	height:30;
+	float:right;
+}
+
+#button img{
+	float:right;
+	margin-right:10px;
+	width:20px;
+}

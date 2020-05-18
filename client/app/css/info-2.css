@@ -1,0 +1,263 @@
+body{
+	margin:0;
+	font-family:'ABeeZee', sans-serif;
+}
+
+#up_arrow{
+	width:70px;
+	position:absolute;
+	top:20px;
+	left:50vw;
+}
+
+#content{
+	background-image:url('../images/background_info.jpg');
+	background-size:cover;
+	background-position:bottom;
+	background-attachment:fixed;
+	width:100vw;
+	height:100vh;
+	font-size:2vw;
+}
+
+.column{
+	float:left;
+	width:25vw;
+	
+	margin-left:16vw;
+	margin-top:150px;
+	transform: rotate(-0.5deg);
+}
+
+/* Planting */
+#planting{
+	width:100%;
+	height:70px;
+	height:70px;
+}
+
+#planting img{
+	width:70px;
+	height:70px;
+	object-fit:cover;
+	
+	float:left;
+}
+
+#planting div{
+	/* font-size:36px; */
+	float:left;
+	margin-top:10px;
+	margin-left:30px;
+	cursor:pointer;
+}
+
+/* Watering */
+#watering{
+	width:100%;
+	height:70px;
+	margin-top:50px;
+}
+
+#watering img{
+	width:70px;
+	height:70px;
+	object-fit:cover;
+	
+	float:left;
+}
+
+#watering div{
+	/* font-size:36px; */
+	float:left;
+	margin-top:10px;
+	margin-left:30px;
+	cursor:pointer;
+}
+
+/* Sun Requirements */
+#sun_req{
+	width:100%;
+	height:70px;
+	margin-top:50px;
+}
+
+#sun_req img{
+	width:70px;
+	height:70px;
+	object-fit:cover;
+	
+	float:left;
+}
+
+#sun_req div{
+	/* font-size:36px; */
+	float:left;
+	margin-top:10px;
+	margin-left:30px;
+	cursor:pointer;
+}
+
+/* Pruning and Training */
+#pruning{
+	width:100%;
+	height:70px;
+}
+
+#pruning img{
+	width:70px;
+	height:70px;
+	object-fit:cover;
+	
+	float:left;
+}
+
+#pruning div{
+	/* font-size:36px; */
+	float:left;
+	margin-top:10px;
+	cursor:pointer;
+}
+
+/* Propagating */
+#propagating{
+	width:100%;
+	height:70px;
+	margin-top:50px;
+}
+
+#propagating img{
+	width:70px;
+	height:70px;
+	object-fit:cover;
+	
+	float:left;
+}
+
+#propagating div{
+	/* font-size:36px; */
+	float:left;
+	margin-top:10px;
+	cursor:pointer;
+}
+
+/* Problems */
+#problem{
+	width:100%;
+	height:70px;
+	margin-top:50px;
+}
+
+#problem img{
+	width:70px;
+	height:70px;
+	object-fit:cover;
+	
+	float:left;
+}
+
+#problem div{
+	/* font-size:36px; */
+	float:left;
+	margin-top:10px;
+	cursor:pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align:center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Feedback icon */
+#feedback_icon{
+	width:70px;
+	opacity:0.5;
+	position:absolute;
+	bottom:30px;
+	right:30px;
+}
+
+#feedback_icon:hover{
+	cursor:pointer;
+	opacity:1;
+}
+
+/* The Modal (background) */
+#feedback_modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+#feedback_modal .modal-content{
+  background-color: #fefefe;
+  margin: 7% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  text-align:center;
+}
+
+#feedback_modal .modal-content h2{
+	margin-top:2px;
+	margin-bottom:10px;
+}
+
+#feedback_modal .modal-content textarea{
+	resize:none;
+	font-size:18px;
+	width:95%;
+	height:200px;
+}
+
+#feedback_modal .modal-content button{
+	margin-top:20px;
+	width:100px;
+	font-size:22px;
+	font-weight:bold;
+	font-family:'Darker Grotesque', sans-serif;
+	background-color:white;
+	border:1px solid #6b7478;	
+}

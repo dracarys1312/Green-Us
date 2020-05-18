@@ -1,0 +1,125 @@
+@font-face{
+	font-family: Abel;
+	src: url('../fonts/VL_AbelPro.ttf');
+}
+
+body{
+	margin:0;
+}
+
+#logo{
+	position:absolute;
+	
+	width:120px;
+	height:auto;
+	left:2%;
+	top:2%;
+}
+
+.background{
+	width:100%;
+	height:100%;
+	opacity:0.3;
+}
+
+.background img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	
+	z-index:-1;
+}
+
+#welcome{
+	position:absolute;
+	left:14%;
+	top:32%;
+}
+
+#signup{
+	width:250px;
+	height:auto;
+	
+	position:absolute;
+	top:59%;
+	left:18%;
+}
+
+#register{
+	width:320px;
+	height:480px;
+	position:absolute;
+	top:60px;
+	right:200px;
+}
+
+.text{
+	width:auto;
+	height:28px;
+	
+	font-family:Abel;
+	font-size:28px;
+	margin-top:10px;
+	margin-bottom:6px;
+	margin-left: 18px;
+}
+
+input{
+	width:auto;
+	height:28px;
+	
+	font-family:Abel;
+	font-size:28px;
+	top:10em;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left: 18px;
+}
+
+#confirm{
+	font-family:Abel;
+	font-size:28px;
+	text-align:left;
+	
+	right:30px;
+	margin-top:15px;
+	margin-bottom:5px;
+}
+
+#terms{
+	width:100%;
+	text-align: center;
+	font-size:30px;
+	margin-bottom:15px;
+}
+
+#terms div{
+	font-family:Abel;
+	font-size:30px;
+}
+
+#terms a{
+	text-decoration:none;
+	font-family:Abel;
+}
+
+#SignUpBtn{
+	width:130px;
+	height:50px;
+	
+	position:absolute;
+	left:100px;
+}
+
+#SignUpBtn a{
+	font-family:Abel;
+	font-size:26px;
+	color:white;
+	text-decoration:none;
+	
+	position:absolute;
+	margin-top:13px;
+	margin-left:32px;
+	
+	z-index:1;
+}

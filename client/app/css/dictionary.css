@@ -1,0 +1,73 @@
+body{
+	font-family:ABeeZee;
+	margin:0;
+}
+
+h1{
+	font-size:52px;
+	
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:10px;
+}
+
+/* Main Part */
+#data{
+	margin-left:20px;
+	margin-top:10px;
+	margin-bottom:20px;
+	width:93.5%;
+	height:auto;
+	float:left;
+	z-index:-1;
+}
+
+/* Tool Panel */
+#tool_panel{
+	width:100%;
+}
+
+/* Search Box */
+#search{
+	font-size:20px;
+	font-family:ABeeZee;
+	width:350px;
+	margin-left:80px;
+}
+
+/* Sorting */
+#sorting{
+	font-size:18px;
+	font-family:ABeeZee;
+	margin-left:400px;
+}
+
+/* Info */
+.plant{
+	width:190px;
+	height:190px;
+	margin-top:20px;
+	margin-left:55px;
+	float:left;
+	
+	background-color:brown;
+}
+
+.plant img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+/*Button*/
+#button{
+	width:90%;
+	height:auto;
+	float:right;
+}
+
+#button img{
+	float:right;
+	margin-right:10px;
+	width:20px;
+}
