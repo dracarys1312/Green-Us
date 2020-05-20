@@ -3,8 +3,7 @@
 <head>
 	<title>Login</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="./css/signin.css">
 	<link rel="stylesheet" href="./css/main.css">
@@ -44,27 +43,53 @@
 	</script>
 </head>
 <body>
-	<a href="/"><img src="images/logo.png" id="logo" style="z-index:1"></a>
+	<div id="loader"></div>
 
-	<img src="images/Background.png" class="background">
+	<div id="content">
+		<a href="/"><img src="images/logo.png" id="logo" style="z-index:1"></a>
 
-	<img src="images/Welcome02.png" id="welcome">
+		<img src="images/Background.png" class="background">
 
-	<div id="SignUpZone">
-		<img src="images/NotHaveAcc.png" id="signup">
-		<div id="SignUpBtn">
-			<a href="/register" id="txtSignUp">Sign Up</a>
-			<img src="images/SignUp.png">
+		<img src="images/Welcome02.png" id="welcome">
+
+		<div id="SignUpZone">
+			<img src="images/NotHaveAcc.png" id="signup">
+			<div id="SignUpBtn">
+				<a href="/register" id="txtSignUp">Sign Up</a>
+				<img src="images/SignUp.png">
+			</div>
+		</div>
+
+		<div id="login">
+			<form id="form" method="post">
+				<div class="row">
+					<div class="form-group">
+						<label for="usr">Email:</label>
+						<input type="text" name="email" placeholder="E-mail" required="" class="form-control" id="usr">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input type="password" name="password" placeholder="Password" required="" class="form-control" id="pwd">
+					</div>
+				</div>
+
+				<input type="submit" value="Login" class="btn btn-success">
+
+			</form>
+
+			<div id="forgot"><a href="/forgetpass">Forgot your password?</a></div>
+
+			<!-- <div id="SignInBtn">
+				<a href="main_page.html" id="txtSignIn">Sign In</a>
+				<img src="images/SignUp.png">
+			</div> -->
 		</div>
 	</div>
-	<div class="form-group register">
-		<form id="form" method="post" >
-			<input type="text" id="account" name="email" placeholder="E-mail" required="" class="form-control"><br/>
-			<input type="password"  id="pass" name="password" placeholder="Password" required="" class="form-control"><br/>
-			<input type="submit" value="Login" class="btn btn-success">
-			<div id="forgot"><a href="/forgetpass">Forgot your password?</a></div>
-		</form>
-	</div>
+
+	<script src="javascript/loader.js"></script>
 	<div class="mssg bg-danger">
 		<span id="check" ></span>
 	</div>

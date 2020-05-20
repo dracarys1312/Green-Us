@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign In</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="./css/main.css">
-
+	<title>Sign Up</title>
+	<link href="css/signup.css" rel="stylesheet">
+	<link href="css/loader.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -42,22 +41,62 @@
 	</script>
 </head>
 <body>
-	<a href="index.html"><img src="images/logo.png" id="logo" style="z-index:1"></a>
+	<div id="loader"></div>
 
-	<img src="images/Background.png" class="background"></div>
+	<div id="content">
+		<a href="index.html"><img src="images/logo.png" id="logo" style="z-index:1"></a>
+		<img src="images/Background.png" class="background">
 
-	<img src="images/Welcome02.png" id="welcome">
+		<img src="images/Welcome02.png" id="welcome">
 
-	<img src="images/CreateAccount.png" id="signup">
+		<img src="images/CreateAccount.png" id="signup">
 
-	<div class="register form-group">
-		<form id="form1" method="post">
-			<input type="email" name="email" placeholder="E-mail" required="" class="form-control"><br/>
-			<input type="text" name="username" placeholder="Username" required="" class="form-control"><br/>
-			<input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
-			<input type="password" name="passwordConf" placeholder="Confirm Password" required="" class="form-control"><br/>
-			<input type="submit" value="Register" class="btn btn-success">
-		</form>
+		<div id="register">
+			<form id="form1" method="post">
+				<div class="row">
+					<div class="form-group">
+						<label for="usr">Username:</label>
+						<input id="usr" type="text" name="username" placeholder="Username" required="" class="form-control"><br/>
+
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group">
+						<label for="usr">Email:</label>
+						<input id="email" type="email" name="email" placeholder="E-mail" required="" class="form-control"><br/>
+
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input id="pwd" type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
+
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group">
+						<label for="cfpwd">Confirm password:</label>
+						<input id="cfpwd" type="password" name="passwordConf" placeholder="Confirm Password" required="" class="form-control"><br/>
+					</div>
+				</div>
+
+				<div id="terms">
+					<div>By signing up, I agree with</div>
+					<a href="#">terms of service</a>
+				</div>
+
+				<!-- <div id="SignUpBtn">
+					<a href="signup.html" id="txtSignUp">Sign Up</a>
+					<img src="images/SignUp.png">
+				</div> -->
+				<input type="submit" value="Register" class="btn btn-success">
+
+			</form>
+		</div>
 	</div>
 
 	<div class="mssg bg-danger">
@@ -68,5 +107,8 @@
 	</div> -->
 	<div id="LangTable"><a href="/login" id="aa"></a>
 	</div>
+
+	<script src="javascript/loader.js"></script>
+
 </body>
 </html>

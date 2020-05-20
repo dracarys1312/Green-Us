@@ -1,29 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Data</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="./css/main.css">
+	<title>GreenUs</title>
+	<link href="css/profile.css" rel="stylesheet">
+	<link href="css/feedback.css" rel="stylesheet">
+	<link href="css/panel.css" rel="stylesheet">
+	<link href="css/loader.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+
 </head>
 <body>
-	<div class="col-md-4 col-md-offset-4">
-		<div>
-			<p>Profile Detail</p>
+	<div id="panel">
+		<div class="icon"><a href="profile.html"><img src="images/avatar.jpg"></a></div>
+		<div class="icon"><a href="collection.html"><img src="images/icons/garden.png"></a></div>
+		<div class="icon"><a href="dictionary.html"><img src="images/icons/dictionary.png"></a></div>
+		<div class="icon"><a href="weather.html"><img src="images/icons/weather.png"></a></div>
+		<div class="icon"><a href="news.html"><img src="images/news.png"></a></div>
+	</div>
+
+	<div id="loader"></div>
+
+	<div id="content">
+		<div id="left_panel">
+			<img src="images/avatar.jpg" id="avatar">
+			<div id="name"><%= name %></div>
+			<div id="email"><%= email %></div>
+			<a class="" href="/logout" id="logout">Logout</a>
 		</div>
-		<div>
-			<center>
-				<table class="table table-hover text-center">
-					<tr><td>Name </td><td><%= name %></td></tr>
-					<tr><td>Email </td><td><%= email %></td></tr>
-				</table>
-			</center>
+
+		<!-- <div id="right_panel">
+			<div class="box">
+				<div class="title">Information</div>
+
+				<div class="feature">
+					<div class="cat">Member Since:</div>
+					<div class="cat">Level:</div>
+					<div class="cat">No. plants:</div>
+				</div>
+
+				<div class="detail">
+					<div class="info memtime">20/03/2020</div>
+
+					<div class="info level">Beginner</div>
+
+					<div class="info noplants">1</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="title">Connect with friends</div>
+
+				<div class="feature">
+					<div class="cat">My ID:</div>
+					<div class="cat">Link:</div>
+					<div class="cat">Friend's ID:</div>
+				</div>
+
+				<div class="detail">
+					<div class="info id">ABC123456</div>
+					<div class="info link">http://greenus.io/abc12..</div>
+					<div class="info friends"><input type="text" placeholder="DEF654321" id="friend_id"></div>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- Feedback -->
+		<img src="images/feedback.png" id="feedback_icon" onclick="open_modal('feedback_modal')">
+
+		<div id="feedback_modal" class="modal">
+
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Give us your feedback!</h2>
+
+				<form name="submit-to-google-sheet">
+					<textarea id="feedback_content" name="feedback" maxlength="500" required></textarea>
+					<button id="submit_btn" type="submit">Send</button>
+				</form>
+				<p id="response" style="display:none;font-size=20px;">Thanks for your feedback!</p>
+				</div>
+
 		</div>
-		<div class="abc">
-			<a href="/logout">Logout</a>
-		</div>
+
+	</div>
+
+	<script src="javascript/loader.js"></script>
+	<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+	<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+	<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+	<script src="javascript/submit_feedback.js"></script>
+	<script src="javascript/feedback_modal.js"></script>
+
 	</div>
 </body>
 </html>
