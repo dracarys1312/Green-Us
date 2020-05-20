@@ -43,7 +43,7 @@
 	- Celebrations
 	- ...  
 	
-	*Coming soon*
+	*Coming soon...*
 - **Weather**
 	- Description: Weather condition
 	- Temperature: Temperature in Celsius
