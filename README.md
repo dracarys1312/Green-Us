@@ -1,12 +1,12 @@
 <p align="center">
-  <img height="150px" src="https://raw.githubusercontent.com/chalalala/Green-Us/master/images/logo.png">
+  <img height="150px" src="https://raw.githubusercontent.com/chalalala/Green-Us/master/views/images/logo.png">
 </p>
 
 # GreenUs
 
 **GreenUs** is a *web-based* gardening app. Our ambition is to give users great experiences with their plants and spread the passion for planting tree to all the people from every ages. We will not only provide **useful information** about plants but also work as a **diary** to keep memories about your little friends.
 
-[![Img](https://img.shields.io/badge/Link-API-informative)](https://github.com/dracarys1312/api-GreenUs)
+[![Img](https://img.shields.io/badge/Link-Website-informative)]()
 [![Img](https://img.shields.io/badge/Link-Youtube-red)](https://www.youtube.com/playlist?list=PLm63CEuRgnSZKpqaSnubn30xS7uBTeDdw)
 
 ## Features
@@ -41,7 +41,9 @@
 	- Harvest time
 	- Watering time
 	- Celebrations
-	- ...
+	- ...  
+	
+	*Coming soon...*
 - **Weather**
 	- Description: Weather condition
 	- Temperature: Temperature in Celsius
